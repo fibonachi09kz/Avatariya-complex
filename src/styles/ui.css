@@ -1,0 +1,231 @@
+:root {
+    --primary-pink-1: #EC1E8E;
+    --primary-pink-2: #F04BA5;
+    --primary-pink-3: #FDE9F4;
+    --primary-pink-4: #8E1255;
+
+    --bg-gradient: linear-gradient(203.75deg, #EC1E8E 17.93%, #753391 110.04%, #1C169E 206.07%);
+
+    --neutral-color-1: #F5F5F5;
+    --neutral-color-2: #EDEDED;
+    --neutral-color-3: #D7D7D7;
+    --neutral-color-4: #B0B0B0;
+
+    --accent-color: #F4C82F;
+
+    --error-primary: #E04949;
+    --error-secondary: #FDECF0;
+    --success-primary: #42BF74;
+    --success-secondary: #E5F6EB;
+
+    --text-color: #000000;
+}
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+body {
+    min-height: 100vh;
+    overflow: hidden;
+}
+h1 {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 52px;
+}
+h2 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+}
+h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+}
+h4 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+}
+h5 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+}
+h6 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+}
+.label-1 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+}
+.label-2 {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 32px;
+}
+.label-3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+}
+.label-4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+}
+.text-1 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+}
+.text-2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+.text-3 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+
+
+.button-1 {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    border-radius: 50px;
+    background: var(--primary-pink-1);
+    cursor: pointer;
+    border: 0;
+    transition: 0.15s all;
+}
+.button-1:hover {
+    background: var(--primary-pink-2);
+}
+.button-1:active {
+    transform: scale(0.95);
+}
+
+
+
+.button-2 {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--primary-pink-1);
+    text-align: center;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border-radius: 50px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid var(--primary-pink-1);
+    transition: 0.15s all;
+}
+.button-2:hover {
+    background: var(--primary-pink-1);
+    color: #fff;
+}
+.button-2:active {
+    transform: scale(0.95);
+}
+
+
+.button-3 {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: var(--primary-pink-1);
+    cursor: pointer;
+    border: 0;
+    transition: 0.15s all;
+}
+.button-3:hover {
+    background: var(--primary-pink-2);
+}
+.button-3:active {
+    transform: scale(0.95);
+}
+
+
+.play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    flex: none;
+    width: 70px;
+    height: 70px;
+    background: var(--primary-pink-1);
+    transition: 0.15s all;
+    cursor: pointer;
+}
+.play-btn svg {
+    margin-left: 4px;
+    transition: 0.15s all;
+}
+.play-btn:hover {
+    background: var(--primary-pink-2);
+}
+.play-btn:active {
+    transform: scale(0.95);
+}
+.play-btn.border {
+    -webkit-box-shadow: 0px 0px 0px 15px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 0px 15px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 0px 15px rgba(34, 60, 80, 0.2);
+    background: #fff;
+}
+.play-btn.border svg path {
+    fill: var(--primary-pink-1);
+}
+.play-btn.border:hover {
+    background: var(--primary-pink-1);
+}
+.play-btn.border:hover svg path {
+    fill: #fff;
+}
+
+
+a {
+    color: var(--primary-pink-1)
+}
+a:hover {
+    text-decoration: none;
+}
+a.extra-link {
+    font-weight: 700;
+    padding-right: 30px;
+    position: relative;
+}
