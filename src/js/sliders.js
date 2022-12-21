@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     let windowSize = window.innerWidth;
-    console.log(windowSize)
 
     var mainPromoSwiper = new Swiper(".main-promo-swiper", {
         pagination: {

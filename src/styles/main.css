@@ -2,6 +2,7 @@
     height: 1044px;
     border-radius: 0px 0px 100px 100px;
     overflow: hidden;
+    margin-bottom: 80px;
 }
 #promo-block .swiper {
     height: 100%;
@@ -120,6 +121,12 @@ header .header-top .logo {
     max-width: 162px;
     margin-right: 60px;
 }
+header .header-top .logo a {
+    display: block;
+}
+header .header-top .logo img {
+    width: 100%;
+}
 header .header-top .region {
     margin-right: auto;
     color: #fff;
@@ -195,7 +202,7 @@ header .header-middle {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 40px;
+    margin-bottom: 20px;
 }
 header .header-middle nav {
     flex: 1;
@@ -203,10 +210,12 @@ header .header-middle nav {
 	align-items: center;
 	justify-content: space-between;
     height: 100%;
+    margin-right: 40px;
+    transition: 0.15s all;
 }
 header .header-middle nav a {
     height: 100%;
-    padding: 0 20px;
+    padding: 0;
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;
@@ -247,4 +256,119 @@ header .header-middle button.burger:hover {
 }
 header .header-middle button.burger:active {
     transform: scale(0.95);
+}
+header .header-middle nav a.drop-item {
+    position: relative;
+    padding-right: 20px;
+}
+header .header-middle nav a.drop-item:after {
+    content: '';
+    width: 11px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(/src/media/icons/ArrowDown.svg) center center/cover no-repeat;
+}
+header .header-middle .logo {
+    width: 0px;
+    margin-right: 0;
+    transition: 0.2s all;
+}
+header #menu-layout.fixed .logo {
+    width: 72px;
+    margin-right: 70px;
+}
+header #menu-layout.fixed .header-middle nav {
+    margin-right: 70px;
+}
+header .header-middle .logo a {
+    display: block;
+}
+header .header-middle .logo img {
+    width: 100%;
+}
+
+
+
+header .header-bottom {
+    width: 100%;
+}
+header #menu-layout {
+    width: 100%;
+    max-width: 1170px;
+}
+header #menu-layout.fixed {
+    position: fixed;
+    top: 20px;
+}
+header .header-bottom nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header .header-bottom nav a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+header .with-drop {
+    position: relative;
+    padding: 20px 0;
+}
+header .drop-menu {
+    position: absolute;
+    top: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: 0.15s all;
+    opacity: 0;
+    visibility: hidden;
+}
+header .drop-menu nav {
+    padding: 12px 0;
+}
+header .drop-menu nav a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    display: block;
+    padding: 7px 20px;
+    text-decoration: none;
+}
+header .drop-menu nav a:hover {
+    background: rgba(233, 233, 233, 0.3);
+}
+header .with-drop:hover .drop-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#tariffs {
+    margin-bottom: 60px;
+}
+#tariffs .title-block {
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto 60px;
+}
+#tariffs h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#tariffs p.descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #848484;
 }

@@ -31,7 +31,7 @@
     font-family: 'Noto Sans', sans-serif;
 }
 body {
-    min-height: 100vh;
+    min-height: 300vh;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
