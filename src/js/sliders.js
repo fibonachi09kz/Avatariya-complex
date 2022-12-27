@@ -23,6 +23,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    // Связываем контроль 2-ух отдельных слайдеров
+    let amusementsSwiper2 = new Swiper(".amusements-swiper-2", {
+        slidesPerView: 2,
+        // effect: "coverflow",
+        // coverflowEffect: {
+        //     rotate: 50,
+        //     stretch: 0,
+        //     depth: 100,
+        //     modifier: 1,
+        //     slideShadows: true,
+        // },
+        spaceBetween: 44,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-big',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        },
+        direction: 'vertical'
+    });
+    let amusementsSwiper = new Swiper(".amusements-swiper", {
+        slidesPerView: 2,
+        // effect: "coverflow",
+        // centeredSlides: true,
+        // coverflowEffect: {
+        //     rotate: -70,
+        //     stretch: 0,
+        //     depth: 50,
+        //     modifier: 0.7,
+        //     slideShadows: false,
+        // },
+        effect: 'cards',
+        cardsEffect: {
+            perSlideOffset: 25,
+            perSlideRotate: 0
+        },
+        loop: true,
+        speed: 1000,
+        autoplay: {
+            delay: 0,
+        },
+        spaceBetween: 40,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-big',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        },
+        direction: 'vertical',
+        sliderMove: function(swiper, event) {
+            
+        }
+    });
+    console.log(amusementsSwiper.params)
+
+
+
+
+
+
     // Boilerplate для слайдера, у которого навигация НЕ дочерний элемент .swiper [используется для вынесения навигации из контейнера и обход overflow:hidden]
     // Конфиг инициализации расположен ниже
 
