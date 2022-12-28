@@ -61,6 +61,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    // {
+    //     let container = document.querySelector('#main-page-video');
+    //     let video = container.querySelector('#main-page-video video');
+    //     let btn = container.querySelector('.play-btn');
+    //     if (container && video && btn) {
+    //         btn.addEventListener('click', function() {
+    //             if (!this.classList.contains('paused')) {
+    //                 video.pause()
+    //                 this.classList.add('paused')
+    //             } else {
+    //                 video.play()
+    //                 this.classList.remove('paused')
+    //             }
+    //         })
+    //     }
+        
+    // }
 
 
 

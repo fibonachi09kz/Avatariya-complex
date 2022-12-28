@@ -26,51 +26,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Связываем контроль 2-ух отдельных слайдеров
     let amusementsSwiper2 = new Swiper(".amusements-swiper-2", {
         slidesPerView: 2,
-        // effect: "coverflow",
-        // coverflowEffect: {
-        //     rotate: 50,
-        //     stretch: 0,
-        //     depth: 100,
-        //     modifier: 1,
-        //     slideShadows: true,
-        // },
-        spaceBetween: 44,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            bulletActiveClass: 'filled',
-            bulletClass: 'star-big',
-            renderBullet: function (index, className) {
-                return '<button type="button" class="' + className + '"></button>';
-            }
+        loop: true,
+        autoplay: {
+            delay: 1500,
         },
-        direction: 'vertical'
+        speed: 700,
+        spaceBetween: 40,
+        direction: 'vertical',
+        allowTouchMove: false
     });
     let amusementsSwiper = new Swiper(".amusements-swiper", {
         slidesPerView: 2,
-        // effect: "coverflow",
-        // centeredSlides: true,
-        // coverflowEffect: {
-        //     rotate: -70,
-        //     stretch: 0,
-        //     depth: 50,
-        //     modifier: 0.7,
-        //     slideShadows: false,
-        // },
-        effect: 'cards',
-        cardsEffect: {
-            perSlideOffset: 25,
-            perSlideRotate: 0
-        },
         loop: true,
-        speed: 1000,
         autoplay: {
-            delay: 0,
+            delay: 1500,
         },
+        speed: 700,
         spaceBetween: 40,
         pagination: {
             el: ".swiper-pagination",
-            clickable: true,
+            clickable: false,
             bulletActiveClass: 'filled',
             bulletClass: 'star-big',
             renderBullet: function (index, className) {
@@ -78,11 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         },
         direction: 'vertical',
-        sliderMove: function(swiper, event) {
-            
-        }
+        allowTouchMove: false
     });
-    console.log(amusementsSwiper.params)
+    amusementsSwiper2.controller.control = this.amusementsSwiper;
 
 
 
@@ -135,7 +108,24 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 
 
-
+    let swiperFea = new Swiper("#tariffs .swiper.fea", {
+        slidesPerView: 3,
+        loop: true,
+        autoplay: {
+            delay: 1500,
+        },
+        grabCursor: true,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-big',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        }
+    })
 
 
 
