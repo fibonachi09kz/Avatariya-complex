@@ -18,6 +18,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    let galleryHeadSwiper = new Swiper(".gallery-head-swiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-small',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        }
+    });
+
+
+    {
+        let gallerySwipers = document.querySelectorAll('.gallery-swiper');
+        gallerySwipers.forEach(function(elem) {
+            new Swiper(elem, {
+                speed: 300,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                slidesPerView: "auto",
+                spaceBetween: 30
+            });
+        })
+    }
+    
 
 
 
