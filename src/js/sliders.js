@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     let galleryHeadSwiper = new Swiper(".gallery-head-swiper", {
+        autoplay: {
+            delay: 3000,
+        },
+        speed: 1000,
+        grabCursor: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -31,20 +36,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    {
-        let gallerySwipers = document.querySelectorAll('.gallery-swiper');
-        gallerySwipers.forEach(function(elem) {
-            new Swiper(elem, {
-                speed: 300,
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                },
-                slidesPerView: "auto",
-                spaceBetween: 30
-            });
-        })
-    }
+  
+    let gallerySwiper1 = new Swiper('.gallery-swiper-1', {
+        loop: true,
+        speed: 7000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false
+        },
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        allowTouchMove: false
+    });
+    let gallerySwiper2 = new Swiper('.gallery-swiper-2', {
+        loop: true,
+        speed: 7000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            reverseDirection: true
+        },
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        allowTouchMove: false
+    });
     
 
 
@@ -136,24 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 
 
-    let swiperFea = new Swiper("#tariffs .swiper.fea", {
-        slidesPerView: 3,
-        loop: true,
-        autoplay: {
-            delay: 1500,
-        },
-        grabCursor: true,
-        spaceBetween: 30,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            bulletActiveClass: 'filled',
-            bulletClass: 'star-big',
-            renderBullet: function (index, className) {
-                return '<button type="button" class="' + className + '"></button>';
-            }
-        }
-    })
 
 
 

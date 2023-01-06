@@ -237,7 +237,7 @@
                                     </svg>
                                 </div>
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
+                                    <!-- <div class="swiper-slide">
                                         <div class="item">
                                             <div class="img">
                                                 <img src="/src/media/main-page-tariffs-swiper/1.png" alt="">
@@ -258,7 +258,7 @@
                                             </div>
                                             <button class="button-3">Купить билет</button>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="swiper-slide">
                                         <div class="item">
                                             <div class="img">
@@ -363,31 +363,28 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="swiper fea">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="logo">
-                                    <img src="/src/media/swiperFea/1.png" alt="">
-                                </div>
-                                <p class="title">Уникальный парк</p>
-                                <p class="descr">Каждый парк площадью более 2000 кв.м. оснащён 15 и более современными драйвовыми аттракционами и зонами для малышей</p>
+                    <div class="fea">
+                        <div class="block">
+                            <div class="logo">
+                                <img src="/src/media/swiperFea/1.png" alt="">
                             </div>
-                            <div class="swiper-slide">
-                                <div class="logo">
-                                    <img src="/src/media/swiperFea/2.png" alt="">
-                                </div>
-                                <p class="title">Шоу и анимация</p>
-                                <p class="descr">Яркие шоу, увлекательные игры, мастер-классы, флешмобы и ежедневная анимация</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="logo">
-                                    <img src="/src/media/swiperFea/3.png" alt="">
-                                </div>
-                                <p class="title">Праздники и события</p>
-                                <p class="descr">Индивидуальные и пакетные программы для любого детского праздника и события вашей семьи!</p>
-                            </div>
+                            <p class="title">Уникальный парк</p>
+                            <p class="descr">Каждый парк площадью более 2000 кв.м. оснащён 15 и более современными драйвовыми аттракционами и зонами для малышей</p>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="block">
+                            <div class="logo">
+                                <img src="/src/media/swiperFea/2.png" alt="">
+                            </div>
+                            <p class="title">Шоу и анимация</p>
+                            <p class="descr">Яркие шоу, увлекательные игры, мастер-классы, флешмобы и ежедневная анимация</p>
+                        </div>
+                        <div class="block">
+                            <div class="logo">
+                                <img src="/src/media/swiperFea/3.png" alt="">
+                            </div>
+                            <p class="title">Праздники и события</p>
+                            <p class="descr">Индивидуальные и пакетные программы для любого детского праздника и события вашей семьи!</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -516,15 +513,20 @@
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
-                            <button class="button-2">Фотогалерея</button>
+
+                            <!-- в data-src поставить заглушку или любую миниатюру -->
+                            <button class="button-2" data-src="" data-fancybox="gallery-album">Фотогалерея</button>
                         </div>
                         <img src="/src/media/gallery/1.png" class="flow-img" alt="avataria-person">
                     </div>
                 </div>
                 <div class="gallery-swipers">
-                    <div class="swiper gallery-swiper">
+                    <div class="swiper gallery-swiper gallery-swiper-1">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide v-1">
+
+                            <!-- в тег img кладём миниатюры, в data-src кладём полноразмерные -->
+
+                            <div class="swiper-slide" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
                                 <div class="img">
                                     <img src="/src/media/gallery/swipers/1.png" alt="">
                                 </div>
@@ -537,7 +539,59 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide v-1-5">
+                            <div class="swiper-slide" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
+                                <div class="img">
+                                    <img src="/src/media/gallery/swipers/1.png" alt="">
+                                </div>
+                                <div class="layer">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M15 5V25" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                            <path d="M25 15L5 15" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide large" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
+                                <div class="img">
+                                    <img src="/src/media/gallery/swipers/1.png" alt="">
+                                </div>
+                                <div class="layer">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M15 5V25" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                            <path d="M25 15L5 15" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
+                                <div class="img">
+                                    <img src="/src/media/gallery/swipers/1.png" alt="">
+                                </div>
+                                <div class="layer">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M15 5V25" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                            <path d="M25 15L5 15" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide large" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
+                                <div class="img">
+                                    <img src="/src/media/gallery/swipers/1.png" alt="">
+                                </div>
+                                <div class="layer">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M15 5V25" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                            <path d="M25 15L5 15" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
                                 <div class="img">
                                     <img src="/src/media/gallery/swipers/1.png" alt="">
                                 </div>
@@ -552,9 +606,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper gallery-swiper">
+                    <div class="swiper gallery-swiper gallery-swiper-2" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide v-1-5">
+                            <div class="swiper-slide large">
                                 <div class="img">
                                     <img src="/src/media/gallery/swipers/1.png" alt="">
                                 </div>
@@ -567,7 +621,46 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide v-1">
+                            <div class="swiper-slide" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
+                                <div class="img">
+                                    <img src="/src/media/gallery/swipers/1.png" alt="">
+                                </div>
+                                <div class="layer">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M15 5V25" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                            <path d="M25 15L5 15" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide large" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
+                                <div class="img">
+                                    <img src="/src/media/gallery/swipers/1.png" alt="">
+                                </div>
+                                <div class="layer">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M15 5V25" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                            <path d="M25 15L5 15" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
+                                <div class="img">
+                                    <img src="/src/media/gallery/swipers/1.png" alt="">
+                                </div>
+                                <div class="layer">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M15 5V25" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                            <path d="M25 15L5 15" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-src="/src/media/gallery/swipers/1.png" data-fancybox="gallery-album">
                                 <div class="img">
                                     <img src="/src/media/gallery/swipers/1.png" alt="">
                                 </div>
@@ -585,13 +678,143 @@
                 </div>
             </section>
 
+            <section id="reviews">
+                <div class="container">
+                    <div class="top">
+                        <div class="info">
+                            <p class="title">Аватария – это внутренний драйв</p>
+                            <p class="subtitle">Внутренняя свобода, маленькие радости и безопасность – вот наши ценности. Их чувствуют все наши гости и говорят о них:</p>
+                        </div>
+                        <div class="reviews__block">
+                            <div class="two-gis">
+                                <img src="/src/media/reviews/2gis.png" alt="2gis">
+                                <span>5.0</span>
+                            </div>
+                            <div class="cl">
+                                <div class="stars">
+                                    <span class="star-small filled"></span>
+                                    <span class="star-small filled"></span>
+                                    <span class="star-small filled"></span>
+                                    <span class="star-small filled"></span>
+                                    <span class="star-small filled"></span>
+                                </div>
+                                <p class="text">Оценка клиентов</p>
+                                <button class="button-2">Все отзывы</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-area">
+                        <ul class="tabs">
+                            <li class="tab active" data-section="1">Название таба 1</li>
+                            <li class="tab" data-section="2">Название таба 2</li>
+                            <li class="tab" data-section="3">Название таба 3</li>
+                        </ul>
+                        <div class="section" data-section="1" style="display: block;">
+                            содержимое таба 1
+                        </div>
+                        <div class="section" data-section="2" style="display: none;">
+                            содержимое таба 2
+                        </div>
+                        <div class="section" data-section="3" style="display: none;">
+                            содержимое таба 3
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
         </main>
 
 
         <footer>
-
+            <div class="top">
+                <div class="container">
+                    <div class="wrap">
+                        <div class="block">
+                            <p class="title">Информация</p>
+                            <div class="menus">
+                                <nav>
+                                    <a href="">О нас</a>
+                                    <a href="">Дни рождения</a>
+                                    <a href="">Ресторан</a>
+                                    <a href="">Фотогалерея</a>
+                                    <a href="">Купить билет</a>
+                                    <a href="">Цены</a>
+                                    <a href="">Контакты</a>
+                                </nav>
+                                <nav>
+                                    <a href="">Отзывы</a>
+                                    <a href="">FAQ</a>
+                                    <a href="">Новости</a>
+                                    <a href="">Акции</a>
+                                    <a href="">Выпускные</a>
+                                    <a href="">Летний лагерь</a>
+                                </nav>
+                            </div>
+                            <div class="logo">
+                                <a href="">
+                                    <img src="/src/media/logo.svg" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <p class="title">Контакты</p>
+                            <address>
+                                <p class="text">Адрес</p>
+                                <ul>
+                                    <li>
+                                        <p class="name">Парк «Волшебный лес»</p>
+                                        <p class="subname">пр. Сейфуллина 9а, уг. ул. Шолохова, ТРЦ Жибек-жолы 3 этаж</p>
+                                    </li>
+                                    <li>
+                                        <p class="name">Парк «1001 ночь»</p>
+                                        <p class="subname">мкр. Жетысу-4, 32/2, ТД «Керуен» 1-2 этаж</p>
+                                    </li>
+                                </ul>
+                            </address>
+                            <div class="tel">
+                                <p class="text">Телефон</p>
+                                <a href="tel:+77477109532">+7 747 710 95 32</a>
+                            </div>
+                            <div class="email">
+                                <p class="text">Email</p>
+                                <a href="mailto:info@avatariya.kz">info@avatariya.kz</a>
+                            </div>
+                            <div class="time">
+                                <p class="text">Режим работы</p>
+                                <ul>
+                                    <li>
+                                        <p class="name">Парк «Волшебный лес»</p>
+                                        <p class="subname">ПН - ВС 11:00 - 23:00</p>
+                                    </li>
+                                    <li>
+                                        <p class="name">Парк «1001 ночь»</p>
+                                        <p class="subname">ПН - ВС 11:00 - 22:00</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="block subscribe">
+                            <p class="title">Подписывайтесь</p>
+                            <div class="social-wrap">
+                                <a href="" class="icon white instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                        <path d="M3.69647 14H10.3035C12.341 14 14 12.3083 14 10.2375V3.7625C13.9709 1.69167 12.3119 0 10.2744 0H3.69647C1.65904 0 0 1.69167 0 3.7625V10.2375C0 12.3083 1.65904 14 3.69647 14ZM11.0603 2.33333C11.526 2.33333 11.9044 2.7125 11.9044 3.20833C11.9044 3.70417 11.526 4.08333 11.0603 4.08333C10.5946 4.08333 10.2162 3.70417 10.2162 3.20833C10.2162 2.7125 10.5946 2.33333 11.0603 2.33333ZM6.98545 3.5C8.87734 3.5 10.3909 5.075 10.3909 7C10.3909 8.925 8.87734 10.5 6.98545 10.5C5.09356 10.5 3.58004 8.925 3.58004 7C3.58004 5.075 5.09356 3.5 6.98545 3.5Z" fill="#EC1E8E"></path>
+                                    </svg>
+                                </a>
+                                <a href="" class="icon white tiktok">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                                        <path d="M12 5.74118C10.8204 5.74406 9.66975 5.36854 8.71056 4.66767V9.55578C8.71024 10.4611 8.43916 11.3448 7.93357 12.0886C7.42799 12.8324 6.71199 13.4009 5.88133 13.7182C5.05067 14.0354 4.14493 14.0862 3.28522 13.8637C2.42552 13.6413 1.65283 13.1562 1.07047 12.4734C0.488117 11.7906 0.123851 10.9426 0.0263841 10.0427C-0.0710829 9.14289 0.102895 8.23411 0.525054 7.43792C0.947213 6.64173 1.59743 5.99608 2.38876 5.5873C3.1801 5.17852 4.07483 5.02609 4.95331 5.15041V7.60896C4.55132 7.47988 4.11964 7.48377 3.71994 7.62007C3.32024 7.75637 2.97294 8.0181 2.72766 8.3679C2.48237 8.7177 2.35163 9.13768 2.35411 9.56785C2.3566 9.99802 2.49217 10.4164 2.74148 10.7632C2.99078 11.11 3.34107 11.3676 3.74232 11.4991C4.14357 11.6305 4.57526 11.6292 4.97574 11.4953C5.37622 11.3614 5.72501 11.1018 5.9723 10.7535C6.2196 10.4051 6.35275 9.98596 6.35274 9.55578V0H8.71056C8.70893 0.203254 8.72561 0.406231 8.7604 0.606364C8.84233 1.05313 9.01269 1.47814 9.26105 1.8554C9.50941 2.23265 9.83055 2.55422 10.2048 2.80044C10.7373 3.15985 11.3616 3.35142 12 3.35128V5.74118Z" fill="#EC1E8E"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="title">Есть вопрос, предложение или отзыв?</p>
+                            <button class="button-3">Написать нам</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </footer>
 
 

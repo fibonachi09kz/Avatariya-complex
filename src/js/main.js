@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Инициализация Fancybox v4
     Fancybox.bind("[data-fancybox]", {
-    
+        
     });
 
 
@@ -61,6 +61,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    {
+        let tabsAreaList = document.querySelectorAll('.tabs-area');
+        if (tabsAreaList.length) {
+            tabsAreaList.forEach(function(area) {
+                let switchers = area.querySelectorAll('.tab');
+                let sections = area.querySelectorAll('.section');
+                if (switchers) {
+                    let defaultTarget = area.querySelector('.tab.active').getAttribute('data-section');
+                    sections.forEach(function(section) {
+                        section.style.display = 'none';
+                        if (section.getAttribute('data-section') == defaultTarget) {
+                            section.style.display = 'block';
+                        }
+                    });
+                    switchers.forEach(function(switcher) {
+                        switcher.addEventListener('click', function() {
+                            if (!this.classList.contains('active') && this.querySelectorAll('a').length == 0) {
+                            switchers.forEach(function(switcher) {
+                                switcher.classList.remove('active');
+                            });
+                            let targetSection = this.getAttribute('data-section');
+                            sections.forEach(function(section) {
+                                section.style.display = 'none';
+                                if (section.getAttribute('data-section') == targetSection) {
+                                section.style.display = 'block';
+                                }
+                            });
+                            this.classList.add('active');
+                            }
+                        });
+                    });
+                }
+            });
+        }
+    }
+
     // {
     //     let container = document.querySelector('#main-page-video');
     //     let video = container.querySelector('#main-page-video video');
@@ -81,7 +117,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+    {
+        let dev = document.createElement('developer');
+        dev.innerHTML = "Frontend: Alexin Danila. Github: fibonachi09kz<br>Backend: Khasaev Radik";
+        dev.style.display = "none";
+        document.body.appendChild(dev) 
+    }
 
 
 
