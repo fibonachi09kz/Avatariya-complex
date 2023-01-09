@@ -43,6 +43,7 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    padding-bottom: 87px;
 }
 main {
     flex: 1;

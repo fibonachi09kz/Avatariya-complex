@@ -18,6 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    let reviewsSwiper = new Swiper(".reviews-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-big',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        }
+    });
+
     let galleryHeadSwiper = new Swiper(".gallery-head-swiper", {
         autoplay: {
             delay: 3000,
