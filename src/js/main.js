@@ -1,18 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    {
+        document.body.classList.add('loaded')
+        setTimeout(function () {
+            document.querySelector('#preloader').style.display = 'none';
+            bodyOverflow('disable')
+        }, 300);
+    }
 
-    // Большинство отдельных функций оборачиваем в модуль, чтобы иметь локальный namespace
-    //
-    // {
-    //     Код...
-    // }
 
+    //Functions
+    function bodyOverflow(status) {
+        switch (status) {
+            case 'enable':
+                document.body.classList.add('over')
+            break;
+            case 'disable':
+                document.body.classList.remove('over')
+            break;
+        }
+    }
+    function jqElemConvert(elem) {
+        return $(elem);
+    }
 
-    // Определяем константы
+    //Constants
     const WINDOW_SIZE = window.innerWidth
 
 
-    // Инициализация Fancybox v4
+    
+
+    //Another init
     Fancybox.bind("[data-fancybox]", {
         
     });
@@ -34,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
+
     // Раскрытие дополнительных преимуществ пакета в блоке тарифов на главной
     {
         let items = document.querySelectorAll('#tariffs .swiper .swiper-slide');
@@ -114,25 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
     //     }
         
     // }
-
-
-
-
-    function bodyOverflow(status) {
-        switch (status) {
-            case 'enable':
-                document.body.classList.add('over')
-            break;
-            case 'disable':
-                document.body.classList.remove('over')
-            break;
-        }
-    }
-
-    function jqElemConvert(elem) {
-        return $(elem);
-    }
-
 
     {
         let flyMenu = document.querySelector('.fly-menu'),

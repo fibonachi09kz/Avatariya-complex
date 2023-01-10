@@ -1010,7 +1010,7 @@ section#gallery .gallery-swiper .swiper-slide:hover .layer {
 
 
 section#reviews {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
 }
 section#reviews .top {
     display: flex;
@@ -1177,16 +1177,18 @@ section#reviews .bg-ava {
         background-position: 100% 0;
     }
 }
-section#reviews .bg-avi {
-    position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+footer .bg-avi {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url(/src/media/reviews/ava.png);
     background-repeat: repeat-x;
     height: 80px;
     width: 500%;
     animation: bg-slide 60s linear infinite;
 }
+
+
 
 
 
@@ -1340,7 +1342,11 @@ footer .bottom-wrap .copy {
 footer .bottom-wrap .policy {
     margin-right: auto;
 }
-footer .bottom {
+.fly-ticket {
+    position: relative;
+    z-index: 20;
+}
+.fly-ticket .bottom {
     position: fixed;
     bottom: 0;
     padding: 20px 0;
@@ -1352,7 +1358,7 @@ footer .bottom {
     overflow: hidden;
     z-index: 9;
 }
-footer .bottom a {
+.fly-ticket .bottom a {
     background: var(--primary-pink-1);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
@@ -1368,16 +1374,16 @@ footer .bottom a {
     z-index: 2;
     transition: 0.15s all;
 }
-footer .bottom a svg {
+.fly-ticket .bottom a svg {
     width: 20px;
 }
-footer .bottom a:hover {
+.fly-ticket .bottom a:hover {
     background-color: var(--primary-pink-2);
 }
-footer .bottom a:active {
+.fly-ticket .bottom a:active {
     transform: scale(0.9);
 }
-footer .bottom a svg {
+.fly-ticket .bottom a svg {
     margin-right: 10px;
 }
 @keyframes bgStars {
@@ -1391,7 +1397,7 @@ footer .bottom a svg {
         transform: scale(0.8);
     }
 }
-footer .bottom .bg-stars {
+.fly-ticket .bottom .bg-stars {
     position: absolute;
     top: auto;
 	left: auto;
@@ -1400,46 +1406,46 @@ footer .bottom .bg-stars {
     z-index: 1;
     height: 100%;
 }
-footer .bottom .bg-stars g path {
+.fly-ticket .bottom .bg-stars g path {
     transform-origin: center;
 }
-footer .bottom .bg-stars g path:nth-child(1) {
+.fly-ticket .bottom .bg-stars g path:nth-child(1) {
     animation: bgStars 3s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(2) {
+.fly-ticket .bottom .bg-stars g path:nth-child(2) {
     animation: bgStars 4s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(3) {
+.fly-ticket .bottom .bg-stars g path:nth-child(3) {
     animation: bgStars 2s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(4) {
+.fly-ticket .bottom .bg-stars g path:nth-child(4) {
     animation: bgStars 3s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(5) {
+.fly-ticket .bottom .bg-stars g path:nth-child(5) {
     animation: bgStars 4s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(6) {
+.fly-ticket .bottom .bg-stars g path:nth-child(6) {
     animation: bgStars 2s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(7) {
+.fly-ticket .bottom .bg-stars g path:nth-child(7) {
     animation: bgStars 3s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(8) {
+.fly-ticket .bottom .bg-stars g path:nth-child(8) {
     animation: bgStars 4s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(9) {
+.fly-ticket .bottom .bg-stars g path:nth-child(9) {
     animation: bgStars 2s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(10) {
+.fly-ticket .bottom .bg-stars g path:nth-child(10) {
     animation: bgStars 3s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(11) {
+.fly-ticket .bottom .bg-stars g path:nth-child(11) {
     animation: bgStars 4s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(12) {
+.fly-ticket .bottom .bg-stars g path:nth-child(12) {
     animation: bgStars 2s ease-in-out infinite;
 }
-footer .bottom .bg-stars g path:nth-child(13) {
+.fly-ticket .bottom .bg-stars g path:nth-child(13) {
     animation: bgStars 3s ease-in-out infinite;
 }
 footer .place-img {
@@ -1489,6 +1495,7 @@ body.over {
     background: var(--primary-pink-1);
     transition: 0.3s all;
     padding: 30px 56px 30px 112px;
+    overflow: auto;
 }
 .fly-menu.active .menu {
     transform: translateX(0);
@@ -1640,3 +1647,100 @@ body.over {
 .fly-menu .menu .bottom li div.active svg {
     transform: rotate(180deg);
 }
+
+
+
+
+
+#preloader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    z-index: 9999;
+    transition: 0.3s all;
+    background: linear-gradient(5.61deg, #1C169E -88.57%, #EC1E8E 107.89%, #E51E98 107.89%), #D6D6D6;
+}
+#preloader svg {
+    position: relative;
+    z-index: 5;
+    overflow: visible;
+}
+#preloader svg .star {
+    transition: 0.15s all;
+    transform-origin: center;
+}
+#preloader svg #bg-preloader {
+    display: none;
+}
+#preloader .wrap {
+    position: relative;
+}
+#preloader .wrap .bg {
+    width: 361px;
+	height: 76px;
+	top: 56px;
+	position: absolute;
+	border-radius: 50px;
+	background: #8E1255;
+    overflow: hidden;
+}
+@keyframes preloaderBg {
+    0% {
+        transform: translateX(-100%);
+    }
+    25% {
+        transform: translateX(-90%);
+    }
+    50% {
+        transform: translateX(-75%);
+    }
+    75% {
+        transform: translateX(-35%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+#preloader .wrap .bg .inner {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-pink-1);
+    animation: preloaderBg 5s ease-in-out;
+}
+
+
+#preloader svg .star-1 {
+    animation: bgStars 3s ease-in-out infinite;
+}
+#preloader svg .star-2 {
+    animation: bgStars 5s ease-in-out infinite;
+}
+#preloader svg .star-3 {
+    animation: bgStars 4s ease-in-out infinite;
+}
+#preloader svg .star-4 {
+    animation: bgStars 5s ease-in-out infinite;
+}
+#preloader svg .star-5 {
+    animation: bgStars 2s ease-in-out infinite;
+}
+#preloader svg .star-6 {
+    animation: bgStars 4s ease-in-out infinite;
+}
+#preloader svg .star-7 {
+    animation: bgStars 3s ease-in-out infinite;
+}
+body.loaded #preloader {
+    opacity: 0;
+    visibility: hidden;
+}
+
