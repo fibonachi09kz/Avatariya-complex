@@ -1448,3 +1448,195 @@ footer .place-img {
 	left: 50%;
 	transform: translateX(230px);
 }
+
+
+
+body.over {
+    overflow: hidden;
+    padding-right: 17px;
+}
+
+.fly-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+.fly-menu .layer {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all;
+}
+.fly-menu.active .layer {
+    opacity: 1;
+    visibility: visible;
+}
+.fly-menu .menu {
+    position: relative;
+    margin-left: auto;
+    z-index: 2;
+    width: 960px;
+    height: 100%;
+    transform: translateX(100%);
+    opacity: 0;
+    background: var(--primary-pink-1);
+    transition: 0.3s all;
+    padding: 30px 56px 30px 112px;
+}
+.fly-menu.active .menu {
+    transform: translateX(0);
+    opacity: 1;
+}
+.fly-menu .menu img {
+    max-width: 100%;
+}
+.fly-menu .menu .top {
+    display: flex;
+	align-items: center;
+    margin-bottom: 60px;
+}
+.fly-menu .menu .top .logo {
+    max-width: 160px;
+    margin-right: 150px;
+}
+.fly-menu .menu .top .region .drop-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+}
+.fly-menu .menu .top .region .drop-title svg {
+    margin-top: 3px;
+}
+.fly-menu .menu .top .region .drop-title span {
+    padding-bottom: 2px;
+    border-bottom: 1px dashed #fff;
+}
+.fly-menu .menu .top .region:hover .drop-title span {
+    border-color: transparent;
+}
+.fly-menu .menu .top .contacts {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: auto;
+}
+.fly-menu .menu .top .phone {
+    width: 40px;
+    height: 40px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 9999px;
+}
+.fly-menu .menu .top .close {
+    cursor: pointer;
+    transition: 0.15s all;
+}
+.fly-menu .menu .top .close:active {
+    transform: scale(0.8);
+}
+.fly-menu .menu .middle {
+    display: flex;
+	align-items: center;
+    margin-bottom: 30px;
+}
+.fly-menu .menu .middle .socials {
+    display: flex;
+	align-items: center;
+	gap: 20px;
+    margin-right: 195px;
+}
+.fly-menu .menu .middle .actions {
+    display: flex;
+	align-items: center;
+}
+
+.fly-menu .menu .middle .actions .lang {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.fly-menu .menu .middle .actions .lang .drop-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.fly-menu .menu .middle .actions .lang .drop-title svg {
+    margin-top: 3px;
+}
+.fly-menu .menu .middle .actions .lang .drop-title span {
+    padding-bottom: 2px;
+    border-bottom: 1px dashed #fff;
+}
+.fly-menu .menu .middle .actions .lang:hover .drop-title span {
+    border-color: transparent;
+}
+.fly-menu .menu .middle .actions .login {
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.fly-menu .menu .middle .actions .login a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+.fly-menu .menu .middle .actions .login:hover a {
+    border-color: transparent;
+}
+.fly-menu .menu .bottom a {
+    color: #fff;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: 0.15s all;
+    text-decoration: none;
+}
+.fly-menu .menu .bottom a:hover {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+}
+.fly-menu .menu .bottom li {
+    margin-bottom: 16px;
+}
+.fly-menu .menu .bottom nav>ul>li>div>a {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.fly-menu .menu .bottom ul li:last-child {
+    margin-bottom: 0;
+}
+.fly-menu .menu .bottom nav>ul>li {
+    padding: 0;
+}
+.fly-menu .menu .bottom nav>ul>li ul {
+    margin-top: 5px;
+}
+.fly-menu .menu .bottom nav>ul>li ul li {
+    margin-bottom: 10px;
+}
+.fly-menu .menu .bottom li div {
+    display: flex;
+    gap: 17px;
+}
+.fly-menu .menu .bottom li {
+    cursor: pointer;
+}
+.fly-menu .menu .bottom li div svg {
+    transition: 0.15s all;
+}
+.fly-menu .menu .bottom li div.active svg {
+    transform: rotate(180deg);
+}

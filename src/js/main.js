@@ -117,6 +117,107 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+    function bodyOverflow(status) {
+        switch (status) {
+            case 'enable':
+                document.body.classList.add('over')
+            break;
+            case 'disable':
+                document.body.classList.remove('over')
+            break;
+        }
+    }
+
+    function jqElemConvert(elem) {
+        return $(elem);
+    }
+
+
+    {
+        let flyMenu = document.querySelector('.fly-menu'),
+        layer = flyMenu.querySelector('.layer'),
+        closeTrigger = flyMenu.querySelector('.close'),
+        trigger = document.querySelector('#menu-layout button.burger');
+        function flyMenuAnimate(action) {
+            switch (action) {
+                case 'open':
+                    flyMenu.style.display = 'block';
+                    setTimeout(() => {
+                        flyMenu.classList.add('active')
+                    }, 100)
+                break;
+                case 'close':
+                    flyMenu.classList.remove('active')
+                    setTimeout(() => {
+                        flyMenu.style.display = 'none';
+                    }, 300)
+                break;
+            }
+        }
+        trigger.addEventListener('click', function() {
+            if (flyMenu.classList.contains('active')) {
+                flyMenuAnimate('close')
+                bodyOverflow('disable')
+            } else {
+                flyMenuAnimate('open')
+                bodyOverflow('enable')
+            }
+        })
+        closeTrigger.addEventListener('click', function() {
+            flyMenuAnimate('close')
+            bodyOverflow('disable')
+        })
+        layer.addEventListener('click', function() {
+            flyMenuAnimate('close')
+            bodyOverflow('disable')
+        })
+    }
+
+
+    {
+        document.querySelectorAll('nav>ul>li>div').forEach(function(elem) {
+            elem.addEventListener('click', function() {
+                this.classList.toggle('active')
+                jqElemConvert(this.nextElementSibling).slideToggle()
+            })
+        })
+    }
+    
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
         let dev = document.createElement('developer');
         dev.innerHTML = "Frontend: Alexin Danila. Github: fibonachi09kz<br>Backend: Khasaev Radik";
