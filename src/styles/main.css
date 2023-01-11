@@ -231,6 +231,9 @@ header .header-middle nav .item>a {
 header .header-middle nav .item>a:hover {
     border-bottom: 3px solid var(--primary-pink-1);
 }
+header .header-middle nav .item>a.active {
+    border-bottom: 3px solid var(--primary-pink-1);
+}
 header .header-middle button.burger {
     width: 40px;
     height: 40px;
@@ -361,6 +364,7 @@ header .drop-menu {
     opacity: 0;
     visibility: hidden;
     width: max-content;
+    z-index: 9;
 }
 header .drop-menu nav {
     padding: 12px 0;
@@ -1177,6 +1181,10 @@ section#reviews .bg-ava {
         background-position: 100% 0;
     }
 }
+footer .bg-avi-wrapper {
+    max-width: 100vw;
+    overflow: hidden;
+}
 footer .bg-avi {
     position: relative;
     left: 50%;
@@ -1450,9 +1458,10 @@ footer .bottom-wrap .policy {
 }
 footer .place-img {
     position: absolute;
-	top: -210px;
+	top: -115px;
 	left: 50%;
 	transform: translateX(230px);
+    z-index: 1;
 }
 
 
@@ -1744,3 +1753,351 @@ body.loaded #preloader {
     visibility: hidden;
 }
 
+
+
+
+
+section#start {
+    padding-top: 270px;
+    min-height: 805px;
+    position: relative;
+    border-radius: 0px 0px 100px 100px;
+    overflow: hidden;
+}
+section#start img.bg {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    z-index: -1;
+}
+
+.breadcrumbs ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.breadcrumbs ul li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.breadcrumbs ul li svg {
+    width: 6px;
+	height: 8px;
+}
+.breadcrumbs ul li svg path {
+    stroke: #fff
+}
+.breadcrumbs ul li a {
+    padding: 5px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.breadcrumbs ul li.active a {
+    border: 1px solid #FFFFFF;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: default;
+    pointer-events: none;
+}
+
+
+section#start h1 {
+    max-width: 560px;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 62px;
+    color: #FFFFFF;
+    margin-top: 60px;
+}
+section#start .sub-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+section#start .sub-wrapper p.subtitle {
+    max-width: 590px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+section#start .sub-wrapper .f-play {
+    display: flex;
+	align-items: center;
+	gap: 20px;
+}
+section#start .sub-wrapper .play-btn.border {
+    box-shadow: 0px 0px 0px 15px rgb(217 217 217 / 20%);
+}
+section#start .sub-wrapper .f-play p {
+    max-width: 230px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+
+body.birthday-page #tariffs {
+    padding-top: 80px;
+}
+body.birthday-page #tariffs .title-block {
+    max-width: 600px;
+	margin: 0 auto;
+}
+
+
+
+section#restaurant {
+    padding: 60px 0;
+    background: #F5F5F5;
+}
+section#restaurant .wrapper {
+    display: flex;
+    position: relative;
+    gap: 30px;
+}
+section#restaurant .wrapper .img {
+    border-radius: 30px;
+	overflow: hidden;
+	height: 308px;
+	max-width: 570px;
+	flex: none;
+}
+section#restaurant .wrapper .img img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section#restaurant .wrapper h2 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 57px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+section#restaurant .wrapper p.subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+section#restaurant .wrapper svg.flow-svg {
+    position: absolute;
+	bottom: -44px;
+	left: -73px;
+}
+
+section#park-rules {
+    
+}
+section#park-rules .top-rules {
+    background: #F5F5F5;
+    padding: 60px 0 80px 0;
+}
+section#park-rules .top {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+section#park-rules .top .img {
+    height: 344px;
+    flex: 1;
+    border-radius: 30px;
+    overflow: hidden;
+}
+section#park-rules .top .flow-svg {
+    position: absolute;
+	right: -70px;
+	bottom: 45px;
+}
+section#park-rules .top .img img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 1;
+}
+section#park-rules .top .info {
+    max-width: 770px;
+    width: 100%;
+}
+section#park-rules .top h2 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 57px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+section#park-rules .top p.subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+section#park-rules .swiper {
+    height: 135px;
+    border-radius: 30px;
+}
+section#park-rules .swiper .swiper-slide {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+}
+section#park-rules .swiper .swiper-slide .wrap {
+    display: flex;
+    gap: 30px;
+}
+section#park-rules .swiper .swiper-slide .wrap .num {
+    width: 70px;
+    height: 70px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    color: #EC1E8E;
+    background: #F5F5F5;
+    border-radius: 100px;
+}
+section#park-rules .swiper .swiper-slide .wrap p.text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+section#park-rules .swiper-control-wrapper {
+    padding-bottom: 70px;
+}
+section#park-rules .swiper-button-next {
+    bottom: 0px;
+	top: auto;
+    left: 70px;
+}
+section#park-rules .swiper-button-prev {
+    bottom: 0px;
+	top: auto;
+	left: 0;
+}
+section#park-rules .bottom {
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+}
+section#park-rules .bottom .block {
+    flex: 1 1 50%;
+}
+section#park-rules .bottom .block p.title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+section#park-rules .bottom .block ol li {
+    margin-bottom: 10px;
+}
+section#park-rules .bottom .block ol li:last-child {
+    margin-bottom: 0;
+}
+section#park-rules .bottom-rules {
+    min-height: 474px;
+    border-radius: 0px 0px 100px 100px;
+    overflow: hidden;
+    position: relative;
+    padding: 60px 0;
+}
+section#park-rules .bottom-rules img.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+section#park-rules .bottom-rules h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+section#park-rules .bottom-rules .wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section#park-rules .bottom-rules .wrapper .item {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    padding: 30px 60px 30px 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 0 1 calc(100% / 2 - 30px);
+}
+section#park-rules .bottom-rules .wrapper .item .icon {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+    color: var(--primary-pink-1);
+}
+section#park-rules .bottom-rules .wrapper .item p.text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+}
+section#park-rules .bottom-rules .wrapper .item p.text span {
+    font-weight: 700;
+    color: var(--primary-pink-1);
+}
+
+
+section#admin-alert {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#admin-alert p.text {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 42px;
+    text-align: center;
+    color: #000000;
+    max-width: 770px;
+    width: 100%;
+}
+
+body.birthday-page section#gallery {
+    margin-bottom: 180px;
+}
+body.birthday-page footer .place-img {
+    top: -220px;
+    transform: translateX(190px);
+}

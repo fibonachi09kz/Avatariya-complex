@@ -167,6 +167,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    let parkRulesSwiper = new Swiper(".park-rules-swiper", {
+		slidesPerView: 1,
+		grabCursor: true,
+        direction: 'vertical',
+        loop: true,
+		on: {
+			init: function (swiper) {
+				swiper.el.querySelector('.swiper-preloader').remove()
+				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
+				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
+				swiper.navigation.init()
+				swiper.navigation.update()
+			},
+			update: function (swiper) {
+				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
+				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
+				swiper.navigation.update()
+			}
+		},
+	});
+
+
+
 
 
 

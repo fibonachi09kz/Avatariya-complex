@@ -40,16 +40,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Плавающее меню в шапке
     {
         let elem = document.querySelector('#menu-layout');
-        let menuPosition = elem.getBoundingClientRect().top;
-        elem.classList.remove('fixed')
-        window.addEventListener('scroll', function() {
-            if (scrollY > 0 && scrollY < menuPosition) {
-                elem.classList.remove('fixed')
-            }
-            if (scrollY > menuPosition - 20) {
+        if (elem) {
+            
+            let currentPosition = window.pageYOffset;
+            if (currentPosition > 121) {
                 elem.classList.add('fixed')
             }
-        });
+            window.addEventListener('scroll', function() {
+                if (scrollY < 121) {
+                    elem.classList.remove('fixed')
+                } else {
+                    elem.classList.add('fixed')
+                }
+            });
+        }
     }
 
 
@@ -133,44 +137,55 @@ document.addEventListener('DOMContentLoaded', function() {
         
     // }
 
-    {
-        let flyMenu = document.querySelector('.fly-menu'),
-        layer = flyMenu.querySelector('.layer'),
-        closeTrigger = flyMenu.querySelector('.close'),
-        trigger = document.querySelector('#menu-layout button.burger');
-        function flyMenuAnimate(action) {
-            switch (action) {
-                case 'open':
-                    flyMenu.style.display = 'block';
-                    setTimeout(() => {
-                        flyMenu.classList.add('active')
-                    }, 100)
-                break;
-                case 'close':
-                    flyMenu.classList.remove('active')
-                    setTimeout(() => {
-                        flyMenu.style.display = 'none';
-                    }, 300)
-                break;
-            }
+
+
+    function flyMenuAnimate(action) {
+        let flyMenu = document.querySelector('.fly-menu');
+        switch (action) {
+            case 'open':
+                flyMenu.style.display = 'block';
+                setTimeout(() => {
+                    flyMenu.classList.add('active')
+                }, 100)
+            break;
+            case 'close':
+                flyMenu.classList.remove('active')
+                setTimeout(() => {
+                    flyMenu.style.display = 'none';
+                }, 300)
+            break;
         }
-        trigger.addEventListener('click', function() {
-            if (flyMenu.classList.contains('active')) {
+    }
+    {
+        let flyMenu = document.querySelector('.fly-menu');
+        trigger = document.querySelector('#menu-layout button.burger');
+        if (flyMenu && trigger) {
+            let layer = flyMenu.querySelector('.layer'),
+            closeTrigger = flyMenu.querySelector('.close');
+            trigger.addEventListener('click', function() {
+                if (flyMenu.classList.contains('active')) {
+                    flyMenuAnimate('close')
+                    bodyOverflow('disable')
+                } else {
+                    flyMenuAnimate('open')
+                    bodyOverflow('enable')
+                }
+            })
+            closeTrigger.addEventListener('click', function() {
                 flyMenuAnimate('close')
                 bodyOverflow('disable')
-            } else {
-                flyMenuAnimate('open')
-                bodyOverflow('enable')
-            }
-        })
-        closeTrigger.addEventListener('click', function() {
-            flyMenuAnimate('close')
-            bodyOverflow('disable')
-        })
-        layer.addEventListener('click', function() {
-            flyMenuAnimate('close')
-            bodyOverflow('disable')
-        })
+            })
+            layer.addEventListener('click', function() {
+                flyMenuAnimate('close')
+                bodyOverflow('disable')
+            })
+            document.addEventListener('keydown', function(event) {
+                if (event.code == 'Escape') {
+                    flyMenuAnimate('close')
+                    bodyOverflow('disable')
+                }
+            });
+        }
     }
 
 
@@ -183,13 +198,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
     
-
-
-   
-
-
-
-
 
 
 
