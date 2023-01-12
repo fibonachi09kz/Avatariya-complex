@@ -511,7 +511,7 @@ span.error {
 .input__wrapper input {
     background: #FFFFFF;
 	border-radius: 50px;
-	padding: 10px 20px;
+	padding: 8px 20px;
 	border: 2px solid transparent;
 	outline: none;
     padding-right: 40px;

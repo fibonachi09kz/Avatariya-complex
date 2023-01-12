@@ -2102,7 +2102,13 @@ body.birthday-page footer .place-img {
     transform: translateX(190px);
 }
 
-
-
+body.birthday-ticket-page form .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+body.birthday-ticket-page form .wrapper .input__wrapper {
+    flex: 0 0 31%;
+}
 
 
