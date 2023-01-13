@@ -199,7 +199,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 
-
+    {
+        let counters = document.querySelectorAll('.counter-box');
+        if (counters.length) {
+            counters.forEach(function(e) {
+                let num = e.querySelector('.num'),
+                    minus = e.querySelector('.minus'),
+                    plus = e.querySelector('.plus'),
+                    min =+ e.getAttribute('data-min') || 1,
+                    max =+ e.getAttribute('data-max') || 1000;
+                if (num && minus && plus) {
+                    num.textContent = min
+                    let count =+ num.textContent;
+                    minus.addEventListener('click', function() {
+                        if (count > min) {
+                            count--
+                            num.textContent = count
+                        }
+                    })
+                    plus.addEventListener('click', function() {
+                        if (count < max) {
+                            count++
+                            num.textContent = count
+                        }
+                    })
+                }
+            })
+        }
+    }
 
 
 

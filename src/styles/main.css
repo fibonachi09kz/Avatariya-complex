@@ -2101,7 +2101,9 @@ body.birthday-page footer .place-img {
     top: -220px;
     transform: translateX(190px);
 }
-
+body.birthday-ticket-page form {
+    padding-bottom: 30px;
+}
 body.birthday-ticket-page form .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -2110,5 +2112,181 @@ body.birthday-ticket-page form .wrapper {
 body.birthday-ticket-page form .wrapper .input__wrapper {
     flex: 0 0 31%;
 }
+body.birthday-ticket-page #start p.subtitle {
+    margin: 30px 0 40px 0;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+body.birthday-ticket-page form a.view-rooms {
+    display: flex;
+	align-items: center;
+	gap: 10px;
+	width: fit-content;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 38px;
+    color: #FFFFFF;
+    margin-bottom: 70px;
+}
+body.birthday-ticket-page form .summary {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+body.birthday-ticket-page form .summary .img {
+    max-width: 270px;
+    width: 100%;
+    height: 204px;
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding: 20px;
+    overflow: hidden;
+}
+body.birthday-ticket-page form .summary .img img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+body.birthday-ticket-page form .summary .settings p.park-name {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+body.birthday-ticket-page form .summary .settings .settings-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+}
+body.birthday-ticket-page #start {
+    margin-bottom: 223px;
+    
+}
+body.birthday-ticket-page #start .bottom-bg {
+    left: 0;
+	position: absolute;
+	background: rgba(142, 18, 85, 0.8);
+	bottom: 0;
+	height: 264px;
+	z-index: -1;
+	width: 100%;
+}
+.counter-box {
+    position: relative;
+}
+.counter-box label {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 38px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.counter-box .counter-wrap {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 50px;
+    justify-content: space-between;
+    width: 140px;
+	flex: none;
+    user-select: none;
+}
+.counter-box .counter-wrap .minus {
+    padding: 12.5px 9px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.counter-box .counter-wrap .minus:active span {
+    transform: scale(0.8);
+}
+.counter-box .counter-wrap .minus span {
+    background: #EC1E8E;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 17.5px;
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    flex: none;
+    transition: 0.15s all;
+}
+.counter-box .counter-wrap .plus {
+    padding: 12.5px 9px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.counter-box .counter-wrap .plus:active span {
+    transform: scale(0.8);
+}
+.counter-box .counter-wrap .plus span {
+    background: #EC1E8E;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    flex: none;
+    transition: 0.15s all;
+}
+.counter-box .counter-wrap .num {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+body.birthday-ticket-page form .summary .summ {
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+body.birthday-ticket-page form .action {
+    padding: 20px;
+    border-radius: 100px;
+    margin-top: auto;
+    background: #fff;
+    margin-bottom: 7px;
+}
 
 
+body.birthday-ticket-page footer .place-img {
+	transform: translateX(180px);
+}
+
+body.cafe-page section#start {
+    min-height: auto;
+    padding-bottom: 80px;
+}
+body.cafe-page section#reviews .reviews__swiper .reviews-swiper {
+    padding-bottom: 80px;
+}
+body.cafe-page section#gallery {
+    margin-bottom: 186px;
+}
+body.cafe-page footer .place-img {
+	position: absolute;
+	top: -202px;
+	left: 50%;
+	transform: translateX(180px);
+	z-index: 1;
+}
