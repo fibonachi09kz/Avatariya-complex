@@ -2290,3 +2290,270 @@ body.cafe-page footer .place-img {
 	transform: translateX(180px);
 	z-index: 1;
 }
+
+
+
+#cafe {
+    padding: 80px 0 0 0;
+    position: relative;
+}
+#cafe .wrapper {
+    display: flex;
+    gap: 30px;
+}
+#cafe .info h3 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 57px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+#cafe .info p.text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 40px;
+}
+#cafe .cafe-swiper {
+    max-width: 570px;
+}
+#cafe .cafe-swiper .swiper-wrapper {
+    height: 260px;
+}
+#cafe .cafe-swiper .swiper-pagination {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    gap: 30px;
+    bottom: 0;
+}
+#cafe .flow-img {
+    position: absolute;
+	left: 50%;
+	transform: translateX(595px);
+	top: 80px;
+    max-width: 370px;
+    display: block;
+}
+
+
+
+body.big-gallery-page #start {
+    min-height: auto;
+    padding-bottom: 80px;
+}
+
+#ex-elems {
+    padding: 40px 0 80px 0;
+}
+#ex-elems .ex-elems-swiper .swiper-wrapper {
+    height: 130px;
+}
+#ex-elems .ex-elems-swiper .swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+    bottom: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+#ex-elems .ex-elems-swiper .swiper-slide {
+    max-width: 470px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    border: 1px solid #E9E9E9;
+    border-radius: 100px;
+}
+#ex-elems .ex-elems-swiper .swiper-slide .icon {
+    width: 70px;
+    height: 70px;
+    background: #F5F5F5;
+    border-radius: 100px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+#ex-elems .ex-elems-swiper .swiper-slide .icon img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+#ex-elems .ex-elems-swiper .swiper-slide p.text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+#selector-gallery {
+    margin-bottom: 90px;
+}
+#selector-gallery .wrapper {
+    display: flex;
+    gap: 30px;
+}
+#selector-gallery .wrapper .selectors-block {
+    width: 100%;
+    max-width: 570px;
+}
+#selector-gallery .wrapper .selectors-block h3 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 57px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+#selector-gallery .wrapper .selectors-block p.subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+#selector-gallery .wrapper .selectors-block h5 {
+    margin-bottom: 20px;
+}
+#selector-gallery .selector-gallery-swiper .swiper-wrapper {
+    min-height: 150px;
+}
+#selector-gallery .selector-gallery-swiper .swiper-pagination {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    gap: 30px;
+    bottom: 0;
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide {
+    transition: 0.15s all;
+    background: #F5F5F5;
+    border-radius: 20px;
+    padding: 20px;
+    height: auto;
+    cursor: pointer;
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide * {
+    transition: 0.15s all;
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide .img {
+    height: 83px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide .img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide p.title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide .icon-click {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: var(--primary-pink-1);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.15s all;
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide .icon-click svg {
+    width: 100%;
+    display: block;
+    max-width: 18px;
+}
+
+#selector-gallery .selector-gallery-swiper .swiper-slide:hover {
+    background: var(--primary-pink-1);
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide:hover p {
+    color: #fff;
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide.active {
+    background: var(--primary-pink-1);
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide.active p {
+    color: #fff;
+}
+#selector-gallery .selector-gallery-swiper .swiper-slide.active .icon-click {
+    opacity: 1;
+    visibility: visible;
+}
+#selector-gallery .photo-block {
+    position: relative;
+    cursor: zoom-in;
+    height: 300px;
+}
+
+#selector-gallery .photo-block .img {
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+}
+#selector-gallery .photo-block .img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+#selector-gallery .photo-block .flow-svg {
+    position: absolute;
+	bottom: -40px;
+	right: -75px;
+}
+#selector-gallery .photo-block .img .icon-photo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex: none;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    transition: 0.15s all;
+}
+#selector-gallery .photo-block .img .icon-photo .wrap {
+    background: var(--primary-pink-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    flex: none;
+    border-radius: 9999px;
+    transition: 0.15s all;
+}
+
+#selector-gallery .photo-block:hover .icon-photo .wrap {
+    background: #fff;
+}
+#selector-gallery .photo-block:hover .icon-photo .wrap path {
+    fill: var(--primary-pink-1)
+}
+#selector-gallery .photo-block:active .icon-photo .wrap {
+    transform: scale(0.8);
+}

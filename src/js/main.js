@@ -230,6 +230,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    {
+        let selectorGallery = document.querySelector('#selector-gallery');
+        if (selectorGallery) {
+            let targetBlock = selectorGallery.querySelector('.photo-block'),
+                selectors = selectorGallery.querySelectorAll('.selector-gallery-swiper .swiper-slide');
+            if (targetBlock && selectors) {
+                selectors.forEach(function(selector) {
+                    selector.addEventListener('click', function(e) {
+                        selectors.forEach(e => e.classList.remove('active'))
+                        this.classList.add('active')
+                    })
+                })
+            }
+        }
+    }
 
 
 

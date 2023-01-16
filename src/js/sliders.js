@@ -50,6 +50,64 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    let cafeSwiper = new Swiper(".cafe-swiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false
+        },
+        speed: 1000,
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-small',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        }
+    });
+
+    let exElemsSwiper = new Swiper(".ex-elems-swiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false
+        },
+        speed: 1000,
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-small',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        }
+    });
+
+
+    let selectorGallerySwiper = new Swiper(".selector-gallery-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-small',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        }
+    });
+
 
   
     let gallerySwiper1 = new Swiper('.gallery-swiper-1', {
