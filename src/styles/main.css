@@ -2,7 +2,6 @@
     height: 1044px;
     border-radius: 0px 0px 100px 100px;
     overflow: hidden;
-    margin-bottom: 80px;
 }
 #promo-block .swiper {
     height: 100%;
@@ -390,6 +389,7 @@ header .with-drop:hover .drop-menu {
     max-width: 1570px;
 }
 #tariffs {
+    padding-top: 80px;
     margin-bottom: 60px;
 }
 #tariffs .title-block {
@@ -1759,7 +1759,8 @@ body.loaded #preloader {
 
 section#start {
     padding-top: 270px;
-    min-height: 805px;
+    min-height: auto;
+    padding-bottom: 80px;
     position: relative;
     border-radius: 0px 0px 100px 100px;
     overflow: hidden;
@@ -2101,25 +2102,27 @@ body.birthday-page footer .place-img {
     top: -220px;
     transform: translateX(190px);
 }
-body.birthday-ticket-page form {
+
+
+form.start {
     padding-bottom: 30px;
 }
-body.birthday-ticket-page form .wrapper {
+form.start .wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
-body.birthday-ticket-page form .wrapper .input__wrapper {
+form.start .wrapper .input__wrapper {
     flex: 0 0 31%;
 }
-body.birthday-ticket-page #start p.subtitle {
+body.buy-ticket-page #start p.subtitle {
     margin: 30px 0 40px 0;
     font-weight: 500;
     font-size: 21px;
     line-height: 38px;
     color: #FFFFFF;
 }
-body.birthday-ticket-page form a.view-rooms {
+form.start a.view-rooms {
     display: flex;
 	align-items: center;
 	gap: 10px;
@@ -2128,14 +2131,14 @@ body.birthday-ticket-page form a.view-rooms {
     font-size: 18px;
     line-height: 38px;
     color: #FFFFFF;
-    margin-bottom: 70px;
 }
-body.birthday-ticket-page form .summary {
+form.start .summary {
     display: flex;
     gap: 30px;
     align-items: center;
+    margin-top: 70px;
 }
-body.birthday-ticket-page form .summary .img {
+form.start .summary .img {
     max-width: 270px;
     width: 100%;
     height: 204px;
@@ -2144,30 +2147,30 @@ body.birthday-ticket-page form .summary .img {
     padding: 20px;
     overflow: hidden;
 }
-body.birthday-ticket-page form .summary .img img {
+form.start .summary .img img {
     width: 100%;
     max-width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
-body.birthday-ticket-page form .summary .settings p.park-name {
+form.start .summary .settings p.park-name {
     font-weight: 700;
     font-size: 32px;
     line-height: 44px;
     color: #FFFFFF;
     margin-bottom: 10px;
 }
-body.birthday-ticket-page form .summary .settings .settings-wrapper {
+form.start .summary .settings .settings-wrapper {
     display: flex;
     gap: 30px;
     align-items: flex-end;
 }
-body.birthday-ticket-page #start {
+body.buy-ticket-page #start {
     margin-bottom: 223px;
-    
+    padding-bottom: 0;
 }
-body.birthday-ticket-page #start .bottom-bg {
+body #start .bottom-bg {
     left: 0;
 	position: absolute;
 	background: rgba(142, 18, 85, 0.8);
@@ -2254,13 +2257,13 @@ body.birthday-ticket-page #start .bottom-bg {
     color: #000000;
 }
 
-body.birthday-ticket-page form .summary .summ {
+form.start .summary .summ {
     font-weight: 900;
     font-size: 42px;
     line-height: 45px;
     color: #FFFFFF;
 }
-body.birthday-ticket-page form .action {
+form.start .action {
     padding: 20px;
     border-radius: 100px;
     margin-top: auto;
@@ -2269,7 +2272,7 @@ body.birthday-ticket-page form .action {
 }
 
 
-body.birthday-ticket-page footer .place-img {
+body.buy-ticket-page footer .place-img {
 	transform: translateX(180px);
 }
 
@@ -2673,3 +2676,16 @@ body.big-gallery-page #start {
 	left: 0;
 	top: 120%;
 }
+
+body.buy-ticket-a1-page #tariffs {
+    margin-bottom: 120px;
+}
+body.buy-ticket-a1-page .place-img {
+    position: absolute;
+	top: -220px;
+	left: 50%;
+	transform: translateX(180px);
+	z-index: 1;
+}
+
+
