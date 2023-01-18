@@ -15,6 +15,7 @@
     <link href="/src/libs/fancybox.css" rel="stylesheet">
     <link href="/src/libs/panzoom.css" rel="stylesheet">
     <link href="/src/libs/swiper-bundle.min.css" rel="stylesheet">
+    <link href="/src/libs/hystmodal.min.css" rel="stylesheet">
     <!-- LIBS CONNECT -->
 
     <link href="/src/styles/default.css" rel="stylesheet">
@@ -378,7 +379,7 @@
                             <div class="pay-block">
                                 <p class="title">Сейчас должно открыться окно оплаты.</p>
                                 <p class="descr">Или нажмите на кнопку «Оплатить» для оплаты заказа, если окно с платежной информацией не открылось автоматически.</p>
-                                <button class="button-3">Оплатить</button>
+                                <button class="button-3" data-modal="#myModal">Оплатить</button>
                             </div>
                         </div>
                     </div>
@@ -532,10 +533,20 @@
         </div>
 
 
+        <div class="hystmodal" id="myModal" aria-hidden="true">
+            <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Закрыть</button>
+                    <!-- Ваш HTML код модального окна -->
+                </div>
+            </div>
+        </div>
+
+
         <script src="/src/libs/jquery-3.6.2.min.js"></script>
         <script src="/src/libs/jquery.validate.js"></script>
         <script src="/src/libs/jquery.inputmask.min.js"></script>
-        <script src="/src/libs/jquery.arcticmodal-0.3.min.js"></script>
+        <script src="/src/libs/hystmodal.min.js"></script>
         <script src="/src/libs/fancybox.umd.js"></script>
         <script src="/src/libs/swiper-bundle.min.js"></script>
         <script src="/src/js/main.js"></script>

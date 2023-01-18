@@ -35,15 +35,14 @@
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
 }
-html {
-    scroll-behavior: smooth;
-}
+
 body {
     min-height: 100vh;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     padding-bottom: 87px;
+    scroll-behavior: smooth;
 }
 main {
     flex: 1;

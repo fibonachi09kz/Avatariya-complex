@@ -250,6 +250,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    {
+        const modalInit = new HystModal({
+            linkAttributeName: "data-modal",
+            catchFocus: true
+        });
+    }
 
 
 
