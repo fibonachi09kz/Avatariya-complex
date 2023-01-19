@@ -2864,3 +2864,52 @@ body.order-v1-page .place-img {
     display: block;
     margin: 0 auto;
 }
+
+
+#features-v2 {
+    margin-top: -64px;
+}
+#features-v2 .fea {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+#features-v2 .fea .block {
+    height: auto;
+    border: 2px solid #F5F5F5;
+    border-radius: 30px;
+    padding: 40px 30px;
+    background: #fff;
+}
+#features-v2 .fea .block .logo {
+    width: 70px;
+    height: 70px;
+    flex: none;
+    background: #F5F5F5;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#features-v2 .fea .block .logo img {
+    width: 100%;
+}
+#features-v2 .fea .block p.title {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+#features-v2 .fea .block p.descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #707070;
+    text-align: left;
+}
+body.order-success-page {
+
+}
