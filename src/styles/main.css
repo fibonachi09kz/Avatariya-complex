@@ -2825,3 +2825,42 @@ body.order-v1-page .place-img {
     right: 41px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E")
 }
+.hystmodal__content h3 {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 62px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.hystmodal__content p.subtitle {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 38px;
+    color: #000000;
+    margin-bottom: 44px;
+}
+.hystmodal__content p.subtitle span {
+    font-weight: 700;
+    font-size: 26px;
+}
+.hystmodal__content p.text {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 60px;
+}
+.hystmodal__content .frame {
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 60px;
+}
+.hystmodal__content .frame img {
+    display: block;
+    margin: 0 auto;
+}
+.hystmodal__content .qr-bg {
+    display: block;
+    margin: 0 auto;
+}
