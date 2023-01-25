@@ -313,25 +313,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     {
-        ymaps.ready(initMap);
-        function initMap() {
-            let map = new ymaps.Map("map", { center: [43.33679021, 76.94609981], zoom: 16 }, { searchControlProvider: "yandex#search" });
-            let placeMark = new ymaps.Placemark(
-                [43.33679021, 76.94609981],
-                {
-                    hintContent: "AVATARIA",
-                    balloonContent:
-                            '<div class="y-content"><img src="src/media/map/logo.svg"><p class="questions__map-text"><span>Парк «Волшебный лес»</span> пр. Сейфуллина 9а, уг. ул. Шолохова, ТРЦ Жибек-жолы 3 этаж</p><a href="">Как проехать?</a></div>',
-                },
-                {
-                    iconLayout: "default#image",
+        let mapMain = document.querySelector('#map');
+        if (mapMain) {
+            ymaps.ready(initMap);
+            function initMap() {
+                let map = new ymaps.Map("map", { center: [43.33679021, 76.94609981], zoom: 16 }, { searchControlProvider: "yandex#search" });
+                let placeMark = new ymaps.Placemark(
+                    [43.33679021, 76.94609981],
+                    {
+                        hintContent: "AVATARIA",
+                        balloonContent:
+                                '<div class="y-content"><img src="src/media/map/logo.svg"><p class="questions__map-text"><span>Парк «Волшебный лес»</span> пр. Сейфуллина 9а, уг. ул. Шолохова, ТРЦ Жибек-жолы 3 этаж</p><a href="">Как проехать?</a></div>',
+                    },
+                    {
+                        iconLayout: "default#image",
+                    }
+                );
+                map.geoObjects.add(placeMark);
+                if ( window.innerWidth < 768 ) {
+                    map.setCenter([62.144297, 65.442870]);
                 }
-            );
-            map.geoObjects.add(placeMark);
-            if ( window.innerWidth < 768 ) {
-                map.setCenter([62.144297, 65.442870]);
             }
         }
+        
     }
     
 
