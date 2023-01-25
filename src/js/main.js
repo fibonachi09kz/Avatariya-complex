@@ -259,6 +259,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    {
+        let parent = document.querySelectorAll('.tabs__section');
+        parent.forEach(function(parentElement) {
+        let switchers = parentElement.querySelectorAll('.tab');
+        let sections = parentElement.querySelectorAll('.section');
+        if (switchers) {
+            let defaultTarget = parentElement.querySelector('.tab.active').getAttribute('data-section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+                if (section.getAttribute('data-section') == defaultTarget) {
+                    section.style.display = 'block';
+                }
+            });
+            switchers.forEach(function(switcher) {
+                switcher.addEventListener('click', function() {
+                        if (!this.classList.contains('active') && this.querySelectorAll('a').length == 0) {
+                        switchers.forEach(function(switcher) {
+                            switcher.classList.remove('active');
+                        });
+                        let targetSection = this.getAttribute('data-section');
+                        sections.forEach(function(section) {
+                            section.style.display = 'none';
+                            if (section.getAttribute('data-section') == targetSection) {
+                            section.style.display = 'block';
+                            }
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+        }
+        });
+    }
 
 
 
@@ -269,6 +302,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+    {
+        ymaps.ready(initMap);
+        function initMap() {
+            let map = new ymaps.Map("map", { center: [43.33679021, 76.94609981], zoom: 16 }, { searchControlProvider: "yandex#search" });
+            let placeMark = new ymaps.Placemark(
+                [43.33679021, 76.94609981],
+                {
+                    hintContent: "AVATARIA",
+                    balloonContent:
+                            '<div class="y-content"><img src="src/media/map/logo.svg"><p class="questions__map-text"><span>Парк «Волшебный лес»</span> пр. Сейфуллина 9а, уг. ул. Шолохова, ТРЦ Жибек-жолы 3 этаж</p><a href="">Как проехать?</a></div>',
+                },
+                {
+                    iconLayout: "default#image",
+                }
+            );
+            map.geoObjects.add(placeMark);
+            if ( window.innerWidth < 768 ) {
+                map.setCenter([62.144297, 65.442870]);
+            }
+        }
+    }
+    
 
 
 
