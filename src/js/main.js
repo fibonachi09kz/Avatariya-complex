@@ -347,7 +347,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
     {
         let mapMain = document.querySelector('#map');
         if (mapMain) {
