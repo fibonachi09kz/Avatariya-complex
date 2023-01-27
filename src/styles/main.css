@@ -3732,3 +3732,11 @@ body.stocks-page .flow-body-img {
 	transform: translateX(-958px);
 	top: 1406px;
 }
+
+
+
+
+
+body.content-detail-page section#start h1 {
+    max-width: none;
+}
