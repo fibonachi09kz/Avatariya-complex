@@ -294,6 +294,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    {
+        let expand = document.querySelectorAll('[data-expand]');
+        function expandAction(element, action) {
+            switch (action) {
+                case 'open':
+                    element.style.display = 'block';
+                    element.classList.add('opened');
+                break;
+                case 'close':
+                    element.style.display = 'none';
+                    element.classList.remove('opened');
+                break;
+            }
+        }
+        if (expand.length) {
+            expand.forEach(e => {
+                let label = e.querySelector('[data-expand-button]');
+                let content = e.querySelector('[data-expand-content]');
+                if (label && content) {
+                    if (label.classList.contains('active')) {
+                        expandAction(content, 'open')
+                    } else {
+                        expandAction(content, 'close')
+                    }
+                    label.addEventListener('click', function() {
+                        this.classList.toggle('active');
+                        if (this.classList.contains('active')) {
+                            expandAction(content, 'open')
+                        } else {
+                            expandAction(content, 'close')
+                        }
+                    })
+                }
+            })
+        }
+    }
 
 
 
@@ -337,6 +373,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
     }
+
+
+
     
 
 

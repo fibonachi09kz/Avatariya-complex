@@ -261,6 +261,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		},
 	});
 
+    let interestingBlockSwiper = new Swiper(".interesting-block-swiper", {
+		slidesPerView: 2,
+        spaceBetween: 30,
+		grabCursor: true,
+        loop: true,
+		on: {
+			init: function (swiper) {
+				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
+				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
+				swiper.navigation.init()
+				swiper.navigation.update()
+			},
+			update: function (swiper) {
+				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
+				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
+				swiper.navigation.update()
+			}
+		},
+	});
+
 
 
     let parkRulesSwiper = new Swiper(".park-rules-swiper", {
