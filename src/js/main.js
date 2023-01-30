@@ -199,6 +199,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 
+
+    // Счётчик для количества чего-либо
+
+    // Счётчик имеет минимальное и максимальное значение, устанавливаемое в атрибутах
+    // Минимальное значение автоматически подставляется в скрытый инпут и в значение счётчика
+    // Изменение счётчика также меняет значение скрытого инпута
     {
         let counters = document.querySelectorAll('.counter-box');
         if (counters.length) {
@@ -207,20 +213,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     minus = e.querySelector('.minus'),
                     plus = e.querySelector('.plus'),
                     min =+ e.getAttribute('data-min') || 1,
-                    max =+ e.getAttribute('data-max') || 1000;
-                if (num && minus && plus) {
+                    max =+ e.getAttribute('data-max') || 1000,
+                    input = e.querySelector('input[type="hidden"]');
+                if (num && minus && plus && input) {
                     num.textContent = min
+                    input.value = min
                     let count =+ num.textContent;
                     minus.addEventListener('click', function() {
                         if (count > min) {
                             count--
                             num.textContent = count
+                            input.value = count
                         }
                     })
                     plus.addEventListener('click', function() {
                         if (count < max) {
                             count++
                             num.textContent = count
+                            input.value = count
                         }
                     })
                 }

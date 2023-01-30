@@ -3913,3 +3913,62 @@ a.back-link:hover path {
     background: var(--primary-pink-1);
     color: #fff;
 }
+
+
+body.graduation-page .head-wrap {
+    width: 100%;
+    max-width: 540px;
+}
+body.graduation-page h1 {
+    margin-bottom: 30px;
+}
+body.graduation-page p.subtitle {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 38px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+body.graduation-page .external-form .wrapper {
+    display: flex;
+    gap: 120px;
+}
+
+body.graduation-page #start:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: rgba(142, 18, 85, 0.8);
+    z-index: -1;
+}
+body.graduation-page .external-form .wrapper>div {
+    width: 50%;
+}
+body.graduation-page .external-form .info-block {
+    margin-top: -154px;
+}
+body.graduation-page .external-form .counter-wrapper {
+    display: flex;
+    gap: 40px;
+}
+body.graduation-page .external-form textarea {
+    height: 86px;
+}
+body.graduation-page .external-form ::-webkit-scrollbar {
+    width: 0;
+}
+
+body.graduation-page .external-form .action {
+    padding: 20px;
+    border-radius: 100px;
+    background: #fff;
+    margin: 20px auto 0;
+    width: fit-content;
+}
+
+body.graduation-page #gallery {
+    margin-bottom: 180px;
+}
