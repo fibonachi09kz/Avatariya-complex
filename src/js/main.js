@@ -425,11 +425,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Добавление детей в профиле
     {
-        let childrenParent = document.querySelector('.childrens-block'),
-            wrapper = childrenParent.querySelector('.wrapper'),
-            form = childrenParent.querySelector('form');
+        let childrenParent = document.querySelector('.childrens-block');
         if (childrenParent) {
-            let addBtn = childrenParent.querySelector('.add-child');
+            let wrapper = childrenParent.querySelector('.wrapper'),
+            form = childrenParent.querySelector('form'),
+            addBtn = childrenParent.querySelector('.add-child');
             function renderChild() {
                 let elem = document.createElement('div');
                 elem.classList.add('item');
@@ -460,17 +460,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 return elem;
             }
-            document.addEventListener('click', function(e) {
-                let deleteBtn = e.target.closest('.delete-child');
-                if (!deleteBtn) return;
-                wrapper.removeChild(e.target.closest('.item'))
-            })
-            if (addBtn) {
+            if (wrapper && form && addBtn) {
+                document.addEventListener('click', function(e) {
+                    let deleteBtn = e.target.closest('.delete-child');
+                    if (!deleteBtn) return;
+                    wrapper.removeChild(e.target.closest('.item'))
+                })
                 addBtn.addEventListener('click', function() {
                     wrapper.appendChild( renderChild() );
                     jqElemConvert(form).validate()
                 });
             }
+            
         }
     }
 
