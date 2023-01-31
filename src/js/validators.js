@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+
+
+
+
+
+
+
+
+    // ПЕРЕПИСАТЬ НА НАТИВНЫЙ JS и перенести в main
     const fieldList = [
         'input[type="text"]',
         'input[type="password"]',
@@ -38,6 +47,11 @@ $(document).ready(function() {
         })
     }
     fieldController(fieldList)
+
+
+
+
+    
 
     jQuery.extend(jQuery.validator.messages, {
         required: "Обязательное поле",

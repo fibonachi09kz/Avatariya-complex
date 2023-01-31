@@ -3998,6 +3998,9 @@ body.graduation-page #gallery {
     line-height: 24px;
     color: var(--primary-pink-1);
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid transparent;
 }
 #cabinet .top a p {
     border-bottom: 1px dashed var(--primary-pink-1);
@@ -4005,19 +4008,33 @@ body.graduation-page #gallery {
 #cabinet .top .link-icon {
     background: #F5F5F5;
     border-radius: 100px;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex: none;
+    border: 1px solid transparent;
 }
 #cabinet .top a:hover p {
-    border-bottom: transparent;
+    border-color: transparent;
 }
 #cabinet .top a:last-child {
     margin-left: auto;
 }
+#cabinet .top a.active {
+    border-color: var(--primary-pink-1);
+}
+#cabinet .top a.active p {
+    border-color: transparent;
+}
+#cabinet .top a.active .link-icon {
+    border-color: var(--primary-pink-1);
+    background-color: transparent;
+}
+
+
+
 #cabinet .cabinet-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4385,4 +4402,48 @@ input:-webkit-autofill:focus {
     display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 30px;
+}
+
+
+#cabinet .childrens-block {
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding: 30px;
+}
+#cabinet .childrens-block h4 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+#cabinet .childrens-block label {
+    color: #000;
+}
+#cabinet .childrens-block .item {
+    display: flex;
+    gap: 30px;
+}
+#cabinet .childrens-block .input__wrapper {
+    flex: 1;
+}
+#cabinet .childrens-block .item .delete-child {
+    display: flex;
+	align-items: flex-end;
+	padding: 10px;
+	cursor: pointer;
+	height: 45px;
+	margin-top: auto;
+	margin-bottom: 20px;
+	width: 45px;
+    transition: 0.1s all;
+}
+#cabinet .childrens-block .item .delete-child:active {
+    transform: scale(0.8);
+}
+#cabinet .childrens-block .actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
 }

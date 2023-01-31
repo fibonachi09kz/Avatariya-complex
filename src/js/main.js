@@ -383,6 +383,25 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
 
+    // Генератор уникальных значений
+    function genUnique(type, length) {
+        let valueLength = length;
+        let chars = '';
+        switch (type) {
+            case 'password':
+                chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            break;
+            case 'id':
+                chars = "0123456789abcdefg";
+            break;
+        }
+        let value = "";
+        for (let i = 0; i < valueLength; i++) {
+            let randomNumber = Math.floor(Math.random() * chars.length);
+            value += chars.substring(randomNumber, randomNumber + 1);
+        }
+        return value
+    }
 
 
     // Загрузка аватарки в профиле
@@ -404,6 +423,56 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Добавление детей в профиле
+    {
+        let childrenParent = document.querySelector('.childrens-block'),
+            wrapper = childrenParent.querySelector('.wrapper'),
+            form = childrenParent.querySelector('form');
+        if (childrenParent) {
+            let addBtn = childrenParent.querySelector('.add-child');
+            function renderChild() {
+                let elem = document.createElement('div');
+                elem.classList.add('item');
+                let fioAttr = `fio-${genUnique('id', 5)}`;
+                let dateAttr = `date-${genUnique('id', 5)}`;
+                elem.innerHTML = 
+                `
+                    <div class="input__wrapper">
+                        <label>ФИО ребенка</label>
+                        <div class="input__box">
+                            <input type="text" name="${fioAttr}" placeholder="Введите ваше имя" required>
+                            <span class="input-icon"></span>
+                        </div>
+                    </div>
+                    <div class="input__wrapper">
+                        <label>День рождение ребенка</label>
+                        <div class="input__box">
+                            <input type="date" name="${dateAttr}" required>
+                            <span class="input-icon"></span>
+                        </div>
+                    </div>
+                    <div class="delete-child">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M3 6.5H5H21" stroke="#EC1E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 6.5V20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5H7C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5V6.5M8 6.5V4.5C8 3.96957 8.21071 3.46086 8.58579 3.08579C8.96086 2.71071 9.46957 2.5 10 2.5H14C14.5304 2.5 15.0391 2.71071 15.4142 3.08579C15.7893 3.46086 16 3.96957 16 4.5V6.5" stroke="#EC1E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                `;
+                return elem;
+            }
+            document.addEventListener('click', function(e) {
+                let deleteBtn = e.target.closest('.delete-child');
+                if (!deleteBtn) return;
+                wrapper.removeChild(e.target.closest('.item'))
+            })
+            if (addBtn) {
+                addBtn.addEventListener('click', function() {
+                    wrapper.appendChild( renderChild() );
+                    jqElemConvert(form).validate()
+                });
+            }
+        }
+    }
 
 
 
@@ -415,14 +484,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-
-
-
-
-
-
-
-
+    
 
 
 
