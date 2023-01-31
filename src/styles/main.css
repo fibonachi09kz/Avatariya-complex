@@ -4289,3 +4289,100 @@ table.ui-table tbody td {
 #cabinet .orders td.cashback {
     font-weight: 600;
 }
+
+#cabinet .profile-block a.back-link {
+    margin-bottom: 30px;
+}
+#cabinet .profile-info {
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+#cabinet .password-block {
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding: 30px;
+}
+#cabinet .profile-wrap h4 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+#cabinet .profile-wrap form .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+#cabinet .profile-wrap form label {
+    color: #000;
+}
+
+#cabinet .profile-wrap form .avatar-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#cabinet .profile-wrap form .avatar-block .img {
+    width: 80px;
+    height: 80px;
+    flex: none;
+    overflow: hidden;
+    border-radius: 100px;
+}
+#cabinet .profile-wrap form .avatar-block .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#cabinet .profile-wrap form .avatar-block .action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-decoration-line: underline;
+    color: #EC1E8E;
+    cursor: pointer;
+    width: fit-content;
+}
+#cabinet .profile-wrap form .avatar-block .action:hover {
+    text-decoration: none;
+}
+#cabinet .profile-wrap form .upload-img {
+    position: relative;
+}
+#cabinet .profile-wrap form .upload-img label {
+    color: var(--primary-pink-1);
+    cursor: pointer;
+}
+#cabinet .profile-wrap form .upload-img .file-name {
+    margin-top: 3px;
+    color: #555;
+	font-size: 14px;
+}
+
+#cabinet .profile-wrap form .upload-img input[type='file'] {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+}
+#cabinet .profile-wrap form button[type="submit"] {
+    margin-top: 10px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 40rem #ffff inset;
+}
+#cabinet .password-block .wrapper {
+    display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 30px;
+}

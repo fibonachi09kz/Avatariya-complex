@@ -385,7 +385,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    
+    // Загрузка аватарки в профиле
+    {
+        let avatarUpload = document.querySelector('#avatar-upload');
+        if (avatarUpload) {
+            let parent = avatarUpload.closest('.avatar-block');
+            let img = parent.querySelector('.img img');
+            if (parent && img) {
+                let fileNameField = parent.querySelector('.file-name');
+                if (fileNameField) {
+                    avatarUpload.addEventListener('change', function(e) {
+                        fileNameField.textContent = e.target.files[0].name
+                        let imgLink = URL.createObjectURL(e.target.files[0])
+                        img.src = imgLink
+                    })
+                }
+            }
+        }
+    }
 
 
 
