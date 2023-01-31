@@ -3972,3 +3972,320 @@ body.graduation-page .external-form .action {
 body.graduation-page #gallery {
     margin-bottom: 180px;
 }
+
+
+
+
+#cabinet {
+    padding: 60px 0;
+    margin-bottom: 20px;
+}
+#cabinet .container {
+    max-width: 970px;
+}
+#cabinet .top {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 40px;
+}
+#cabinet .top a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    color: var(--primary-pink-1);
+    text-decoration: none;
+}
+#cabinet .top a p {
+    border-bottom: 1px dashed var(--primary-pink-1);
+}
+#cabinet .top .link-icon {
+    background: #F5F5F5;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+}
+#cabinet .top a:hover p {
+    border-bottom: transparent;
+}
+#cabinet .top a:last-child {
+    margin-left: auto;
+}
+#cabinet .cabinet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+#cabinet .main-info {
+    grid-column: span 1 / span 1;
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding: 30px;
+}
+#cabinet .main-info h4 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+#cabinet .main-info .avatar {
+    width: 80px;
+    height: 80px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    flex: none;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#cabinet .main-info .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#cabinet .main-info .field {
+    margin-bottom: 20px;
+}
+#cabinet .main-info .field label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #9A9A9A;
+    margin-bottom: 5px;
+}
+#cabinet .main-info .field p, #cabinet .main-info .field.phone a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+}
+#cabinet .main-info .field.email a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    display: block;
+    width: fit-content;
+    color: var(--primary-pink-1);
+}
+#cabinet .main-info a.edit-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--primary-pink-1);
+    margin-top: 10px;
+    width: fit-content;
+}
+
+
+
+
+
+
+
+
+#cabinet .bonuses {
+    grid-column: span 1 / span 1;
+    background: linear-gradient(203.75deg, #EC1E8E 17.93%, #753391 110.04%, #1C169E 206.07%);
+    border-radius: 30px;
+    padding: 30px;
+    color: #fff
+}
+#cabinet .bonuses h4 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+#cabinet .bonuses p.descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    margin-bottom: 20px;
+}
+#cabinet .bonuses .field-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#cabinet .bonuses .field-line label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 5px;
+}
+#cabinet .bonuses .field-line p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+#cabinet .bonuses .bonus-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 26px;
+}
+#cabinet .bonuses .bonus-field .bonus-counter {
+    width: 80px;
+    height: 80px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    color: var(--primary-pink-1);
+}
+#cabinet .bonuses .bonus-field label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 5px;
+}
+#cabinet .bonuses .bonus-field p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+#cabinet .bonuses .bonus-fired {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+#cabinet .bonuses a.bonus-instruction {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+#cabinet .childrens {
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding: 30px;
+    grid-column: span 2 / span 2;
+}
+#cabinet .childrens h4 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+#cabinet .childrens .wrapper {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+#cabinet .childrens .children-add {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px 50px 20px 20px;
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+}
+#cabinet .childrens .children-add p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+#cabinet .childrens .children-add a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    color: var(--primary-pink-1);
+}
+#cabinet .childrens .children-add a p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--primary-pink-1);
+}
+#cabinet .childrens .info {
+    flex: 1;
+}
+table.ui-table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+table.ui-table thead {
+
+}
+table.ui-table thead td {
+    padding: 10px 0;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 19px;
+	color: #000000;
+}
+table.ui-table tbody tr {
+    border-bottom: 1px solid #EAEAEA;
+}
+table.ui-table tbody tr:last-child {
+    border-bottom: 0;
+}
+table.ui-table tbody td {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    padding: 10px 0;
+}
+#cabinet .childrens a.edit-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#cabinet .childrens a.edit-link p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px; 
+}
+#cabinet .orders {
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding: 30px;
+    grid-column: span 2 / span 2;
+}
+#cabinet .orders h4 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+#cabinet .orders a.orders-link {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+#cabinet .orders td.cost {
+    font-weight: 600;
+}
+#cabinet .orders td.cashback {
+    font-weight: 600;
+}
