@@ -385,10 +385,11 @@ label.checkbox__label {
     row-gap: 0px;
     column-gap: 8px;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
     font-weight: 500;
     color: var(--text-color);
     cursor: pointer;
+    user-select: none;
 }
 
 label.radio__label {
@@ -417,7 +418,7 @@ label.radio__label {
     user-select: none;
     flex-shrink: 0;
     color: var(--main-blue);
-    background-color: #fff;
+    background-color: transparent;
     width: 20px;
     height: 20px;
     border: 2px solid var(--primary-pink-1) ;
