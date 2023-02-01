@@ -400,7 +400,7 @@
                             </div>
                             <div class="actions">
                                 <button type="submit" class="button-3">Войти</button>
-                                <button type="button" class="button-2">Зарегистрироваться</button>
+                                <button type="button" data-modal="#reg-modal" class="button-2">Зарегистрироваться</button>
                             </div>
                         </form>
                     </div>
@@ -549,6 +549,28 @@
                 </svg>
             </div>
             
+        </div>
+
+
+        <div class="hystmodal" id="reg-modal" aria-hidden="true">
+            <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Закрыть</button>
+                    <div class="hystmodal__content">
+                        <h3>Спасибо</h3>
+                        <div class="subwrapper">
+                            <p class="subtitle">Вы успешно прошли регистрацию. <b>Вселенная Avatariya ждёт вас!</b></p>
+                            <div class="success-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="42" viewBox="0 0 50 42" fill="none">
+                                    <path d="M45.1485 4.94922L14.1479 37.0509L4.84766 27.43" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <img src="/src/media/login/modal.png" alt="" class="reg-img">
+                    </div>
+                </div>
+            </div>
         </div>
 
 

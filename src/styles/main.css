@@ -4566,3 +4566,30 @@ input:-webkit-autofill:focus {
     align-items: center;
     margin-top: 5px;
 }
+
+
+#reg-modal .subwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+#reg-modal .subwrapper .success-icon {
+    width: 140px;
+    height: 140px;
+    flex: none;
+    background: var(--primary-pink-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+}
+#reg-modal .subwrapper .subtitle {
+    margin: 0
+}
+#reg-modal .reg-img {
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto;
+    display: block;
+}
