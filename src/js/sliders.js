@@ -71,6 +71,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    let outParksSwiper = new Swiper(".our-parks-swiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false
+        },
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-small',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        }
+    });
+
     let exElemsSwiper = new Swiper(".ex-elems-swiper", {
         slidesPerView: 'auto',
         spaceBetween: 30,
@@ -175,7 +195,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+    function swiperOverUpdate() {
+        this.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
+        this.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
+        this.navigation.update()
+    }
+    function swiperOverInit() {
+        this.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
+        this.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
+        this.navigation.init()
+        this.navigation.update()
+    }
 
 
     // Boilerplate для слайдера, у которого навигация НЕ дочерний элемент .swiper [используется для вынесения навигации из контейнера и обход overflow:hidden]
@@ -209,16 +239,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		observeParents: true,
 		on: {
 			init: function (swiper) {
-				swiper.el.querySelector('.swiper-preloader').remove()
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.init()
-				swiper.navigation.update()
+				let bindedInit = swiperOverInit.bind(swiper)
+                bindedInit()
 			},
 			update: function (swiper) {
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.update()
+                let bindedUpdate = swiperOverUpdate.bind(swiper)
+				bindedUpdate()
 			}
 		},
 	});
@@ -229,15 +255,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		grabCursor: true,
 		on: {
 			init: function (swiper) {
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.init()
-				swiper.navigation.update()
+				let bindedInit = swiperOverInit.bind(swiper)
+                bindedInit()
 			},
 			update: function (swiper) {
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.update()
+                let bindedUpdate = swiperOverUpdate.bind(swiper)
+				bindedUpdate()
 			}
 		},
 	});
@@ -248,15 +271,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		grabCursor: true,
 		on: {
 			init: function (swiper) {
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.init()
-				swiper.navigation.update()
+				let bindedInit = swiperOverInit.bind(swiper)
+                bindedInit()
 			},
 			update: function (swiper) {
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.update()
+                let bindedUpdate = swiperOverUpdate.bind(swiper)
+				bindedUpdate()
 			}
 		},
 	});
@@ -268,15 +288,12 @@ document.addEventListener('DOMContentLoaded', function() {
         loop: true,
 		on: {
 			init: function (swiper) {
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.init()
-				swiper.navigation.update()
+				let bindedInit = swiperOverInit.bind(swiper)
+                bindedInit()
 			},
 			update: function (swiper) {
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.update()
+                let bindedUpdate = swiperOverUpdate.bind(swiper)
+				bindedUpdate()
 			}
 		},
 	});
@@ -290,16 +307,12 @@ document.addEventListener('DOMContentLoaded', function() {
         loop: true,
 		on: {
 			init: function (swiper) {
-				swiper.el.querySelector('.swiper-preloader').remove()
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.init()
-				swiper.navigation.update()
+				let bindedInit = swiperOverInit.bind(swiper)
+                bindedInit()
 			},
 			update: function (swiper) {
-				swiper.params.navigation.nextEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-next');
-				swiper.params.navigation.prevEl = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-button-prev');
-				swiper.navigation.update()
+                let bindedUpdate = swiperOverUpdate.bind(swiper)
+				bindedUpdate()
 			}
 		},
 	});
@@ -308,7 +321,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+    let historySwiper = new Swiper(".history-swiper", {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		grabCursor: true,
+        loop: true,
+		pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'active',
+            bulletClass: 'year',
+            renderBullet: function (index, className) {
+                let currentYear = this.slides[index].getAttribute('year')
+                return '<button class="' + className + '"><p>' + currentYear + '</p><span class="star-big"></span></button>';
+            }
+        },
+		observeParents: true,
+		on: {
+			init: function (swiper) {
+				let bindedInit = swiperOverInit.bind(swiper)
+                bindedInit()
+			},
+			update: function (swiper) {
+                let bindedUpdate = swiperOverUpdate.bind(swiper)
+				bindedUpdate()
+			}
+		},
+	});
 
 
 
