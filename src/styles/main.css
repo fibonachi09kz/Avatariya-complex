@@ -4593,3 +4593,25 @@ input:-webkit-autofill:focus {
     margin: 0 auto;
     display: block;
 }
+
+
+
+body.v-404-page #start .ex-wrapper {
+    margin-top: 30px;
+    display: flex;
+    gap: 60px;
+}
+body.v-404-page #start .ex-wrapper p.subtitle {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 38px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+body.v-404-page #start .ex-wrapper img {
+    width: 100%;
+    max-width: 550px;
+}
+body.v-404-page #start h1 {
+    max-width: none;
+}
