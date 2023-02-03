@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    {
+    try {
         document.body.classList.add('loaded')
         setTimeout(function () {
             document.querySelector('#preloader').style.display = 'none';
             bodyOverflow('disable')
         }, 300);
+    } catch (e) {
+        console.log(e)
     }
+    
 
 
     //Functions
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Плавающее меню в шапке
-    {
+    try {
         let elem = document.querySelector('#menu-layout');
         if (elem) {
             
@@ -54,11 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+    } catch (e) {
+        console.log(e)
     }
 
 
     // Раскрытие дополнительных преимуществ пакета в блоке тарифов на главной
-    {
+    try {
         let items = document.querySelectorAll('#tariffs .swiper .swiper-slide');
         if (items) {
             items.forEach(item => {
@@ -80,10 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
         }
+    } catch (e) {
+        console.log(e)
     }
 
 
-    {
+    try {
         let tabsAreaList = document.querySelectorAll('.tabs-area');
         if (tabsAreaList.length) {
             tabsAreaList.forEach(function(area) {
@@ -117,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+    } catch (e) {
+        console.log(e)
     }
 
     // {
@@ -156,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
             break;
         }
     }
-    {
+    try {
         let flyMenu = document.querySelector('.fly-menu');
         trigger = document.querySelector('#menu-layout button.burger');
         if (flyMenu && trigger) {
@@ -186,16 +195,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+    } catch (e) {
+
     }
 
 
-    {
+    try {
         document.querySelectorAll('nav>ul>li>div').forEach(function(elem) {
             elem.addEventListener('click', function() {
                 this.classList.toggle('active')
                 jqElemConvert(this.nextElementSibling).slideToggle()
             })
         })
+    } catch (e) {
+        console.log(e)
     }
     
 
@@ -205,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Счётчик имеет минимальное и максимальное значение, устанавливаемое в атрибутах
     // Минимальное значение автоматически подставляется в скрытый инпут и в значение счётчика
     // Изменение счётчика также меняет значение скрытого инпута
-    {
+    try {
         let counters = document.querySelectorAll('.counter-box');
         if (counters.length) {
             counters.forEach(function(e) {
@@ -236,11 +249,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
         }
+    } catch (e) {
+        console.log(e)
     }
 
 
 
-    {
+    try {
         let selectorGallery = document.querySelector('#selector-gallery');
         if (selectorGallery) {
             let targetBlock = selectorGallery.querySelector('.photo-block'),
@@ -254,22 +269,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
             }
         }
+    } catch (e) {
+        console.log(e)
     }
 
 
 
 
 
-    {
+    try {
         const modalInit = new HystModal({
             linkAttributeName: "data-modal",
             catchFocus: true
         });
+    } catch (e) {
+        console.log(e)
     }
 
 
 
-    {
+    try {
         let parent = document.querySelectorAll('.tabs__section');
         parent.forEach(function(parentElement) {
         let switchers = parentElement.querySelectorAll('.tab');
@@ -301,10 +320,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         });
+    } catch (e) {
+        console.log(e)
     }
 
 
-    {
+    try {
         let expand = document.querySelectorAll('[data-expand]');
         function expandAction(element, action) {
             switch (action) {
@@ -339,25 +360,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
         }
+    } catch (e) {
+        console.log(e)
     }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {
+    try {
         let mapMain = document.querySelector('#map');
         if (mapMain) {
             ymaps.ready(initMap);
@@ -381,6 +391,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
+    } catch (e) {
+        console.log(e)
     }
 
     // Генератор уникальных значений
@@ -405,7 +417,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Загрузка аватарки в профиле
-    {
+    try {
         let avatarUpload = document.querySelector('#avatar-upload');
         if (avatarUpload) {
             let parent = avatarUpload.closest('.avatar-block');
@@ -421,10 +433,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+    } catch (e) {
+        console.log(e)
     }
 
     // Добавление детей в профиле
-    {
+    try {
         let childrenParent = document.querySelector('.childrens-block');
         if (childrenParent) {
             let wrapper = childrenParent.querySelector('.wrapper'),
@@ -473,21 +487,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
         }
-    }
+    } catch (e) {
+        console.log(e)
+    }   
 
 
 
-    {
+    try {
         let dev = document.createElement('developer');
         dev.innerHTML = "Frontend: Alexin Danila. Github: fibonachi09kz<br>Backend: Khasaev Radik";
         dev.style.display = "none";
         document.body.appendChild(dev) 
+    } catch (e) {
+        console.log(e)
     }
 
 
     
 
 
+
+   
 
 
 

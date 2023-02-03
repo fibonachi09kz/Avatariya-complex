@@ -128,6 +128,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    let teamMiddleSwiper = new Swiper(".team-middle-swiper", {
+        grabCursor: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-small',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        }
+    });
 
   
     let gallerySwiper1 = new Swiper('.gallery-swiper-1', {
@@ -249,6 +262,29 @@ document.addEventListener('DOMContentLoaded', function() {
 		},
 	});
 
+
+    let animatorsSwiper = new Swiper(".animators-swiper", {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		grabCursor: true,
+		pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            bulletActiveClass: 'filled',
+            bulletClass: 'star-small',
+            renderBullet: function (index, className) {
+                return '<button type="button" class="' + className + '"></button>';
+            }
+        },
+		observeParents: true,
+		on: {
+			init: function (swiper) {
+				let bindedInit = swiperOverInit.bind(swiper)
+                bindedInit()
+			}
+		},
+	});
+
     let videoTypesSwiper = new Swiper(".video-types-swiper", {
 		slidesPerView: 1,
         spaceBetween: 40,
@@ -323,24 +359,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let historySwiper = new Swiper(".history-swiper", {
 		slidesPerView: 'auto',
-		spaceBetween: 30,
+		spaceBetween: 80,
 		grabCursor: true,
         loop: true,
-		pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            bulletActiveClass: 'active',
-            bulletClass: 'year',
-            renderBullet: function (index, className) {
-                let currentYear = this.slides[index].getAttribute('year')
-                return '<button class="' + className + '"><p>' + currentYear + '</p><span class="star-big"></span></button>';
-            }
-        },
 		observeParents: true,
+        effect: 'coverflow',
 		on: {
 			init: function (swiper) {
 				let bindedInit = swiperOverInit.bind(swiper)
                 bindedInit()
+                this.params.pagination.el = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-pagination');
+                this.params.pagination.bulletActiveClass = 'active';
+                this.params.pagination.bulletClass = 'year';
+                this.params.pagination.clickable = true;
+                this.params.pagination.renderBullet = function (index, className) {
+                    let currentYear = this.slides[index].getAttribute('year')
+                    return '<button class="' + className + '"><p>' + currentYear + '</p><span class="star-big"></span></button>';
+                }
+                this.pagination.init()
 			},
 			update: function (swiper) {
                 let bindedUpdate = swiperOverUpdate.bind(swiper)
