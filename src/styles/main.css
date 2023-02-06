@@ -5115,3 +5115,287 @@ body.about-page section#start {
 	justify-content: center;
 	gap: 30px;
 }
+
+
+
+
+.header-top button.burger {
+    width: 40px;
+    height: 40px;
+    flex: none;
+    background: var(--primary-pink-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 9999px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.15s all;
+}
+.header-top  button.burger span {
+    height: 1px;
+    width: 18px;
+    background-color: #fff;
+}
+.header-top  button.burger:hover {
+    background: var(--primary-pink-2);
+}
+.header-top  button.burger:active {
+    transform: scale(0.95);
+}
+.header-top button.burger {
+    display: none;
+}
+@media (max-width: 991px) {
+    #menu-layout {
+        display: none;
+    }
+    header .header-top {
+        padding: 0 15px;
+    }
+    header .header-top button.burger {
+        display: flex;
+    }
+    header .header-top .socials {
+        display: none;
+    }
+    header .header-top .lang {
+        display: none;
+    }
+    header .header-top .login {
+        display: none;
+    }
+    header .header-top .button-1 {
+        display: none;
+    }
+    header {
+        top: 10px;
+    }
+    .fly-menu .menu {
+        width: 90%;
+        padding: 10px 20px 95px 20px;
+    }
+    .fly-menu .menu .top {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .fly-menu .menu .top .logo {
+        max-width: 71px;
+        margin-right: auto;
+    }
+    .fly-menu .menu .top .contacts {
+        order: 3;
+	    width: 100%
+    }
+    .fly-menu .menu .middle {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .fly-menu .menu .middle .actions {
+        width: 100%;
+    }
+    .fly-menu .menu .bottom nav>ul>li>div>a {
+        font-size: 21px;
+	    line-height: 30px;
+    }
+    .fly-menu .menu .bottom li {
+        margin-bottom: 12px;
+    }
+    .fly-menu .menu .bottom li div {
+        gap: 12px;
+    }
+    .fly-menu .menu .top .phone {
+        width: 30px;
+        height: 30px;
+    }
+    .fly-menu .menu .top .phone svg {
+        width: 17px;
+    }
+    .fly-menu .menu .top .close svg {
+        width: 30px;
+    }
+    .header-top button.burger span {
+        width: 15px;
+    }
+    #promo-block .swiper-slide .content {
+        align-items: flex-start;
+        padding: 110px 15px;
+    }
+    #promo-block .swiper-slide .content .title {
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 20px;
+    }
+    #promo-block .swiper-slide .content .description {
+        font-size: 18px;
+	    line-height: 28px;
+    }
+    #promo-block .swiper-slide .content .actions {
+        flex-wrap: wrap;
+    }
+    #promo-block .swiper-slide .content .actions a.button-1 {
+        font-size: 18px;
+        line-height: 25px;
+        padding: 15px 30px;
+    }
+    .play-btn {
+        box-shadow: 0px 0px 0px 10px rgb(217 217 217 / 20%) !important;
+        width: 55px;
+	    height: 55px;
+    }
+    .f-play {
+        gap: 25px;
+    }
+    .play-btn svg {
+        width: 18px;
+    }
+    .actions .f-play p {
+        max-width: 190px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    #promo-block {
+        height: auto;
+        border-radius: 0px 0px 50px 50px;
+    }
+    #promo-block .swiper .swiper-pagination {
+        bottom: 60px;
+        gap: 30px;
+    }
+    .star-big {
+        width: 20px;
+        height: 20px;
+    }
+    #tariffs {
+        padding: 60px 15px 0;
+    }
+    #tariffs h2 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #tariffs p.descr {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    #tariffs .title-block {
+        margin: 0 auto 40px;
+    }
+    #tariffs .swiper {
+        padding: 0 0 60px 0;
+    }
+    #tariffs .swiper-button-next, #tariffs .swiper-button-prev {
+        display: none;
+    }
+    #tariffs .item:hover {
+        box-shadow: none;
+    }
+    #tariffs .item {
+        padding: 20px;
+    }
+    #tariffs .item .img {
+        max-height: none;
+    }
+    #tariffs .fea {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    #tariffs .fea .block {
+        padding: 30px 20px;
+    }
+    #tariffs .fea .block p.title {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+    #tariffs .fea .block p.descr {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #main-page-video {
+        border-radius: 0px 0px 50px 50px;
+    }
+    #main-page-video .wrapper {
+        padding: 0 15px;
+        margin-top: 70px;
+	    margin-bottom: 60px;
+    }
+    #main-page-video .wrapper .play-btn {
+        margin: 0 auto 50px;
+    }
+    #main-page-video .wrapper p.title {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #main-page-video .wrapper p.descr {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    section#amusements .wrapper {
+        flex-wrap: wrap;
+        padding: 0 15px;
+    }
+    section#amusements .bg-img {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        transform: none;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        max-width: 400px;
+    }
+    section#amusements .repart .line {
+        display: none;
+    }
+    .amusements-swiper-2 {
+        display: none;
+    }
+    section#amusements .repart {
+        width: 100%;
+        display: block;
+    }
+    section#amusements .swiper-pagination {
+        position: relative;
+        left: 50%;
+        display: flex;
+        transform: translateX(-50%);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        top: 0;
+        margin-top: 20px;
+    }
+    section#amusements .repart .am-swiper .swiper-slide {
+        border-radius: 150px;
+    }
+    section#amusements .wrapper .information {
+        padding-left: 0;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    header {
+        top: 0px;
+    }
+    header .header-top .logo {
+        max-width: 71px;
+	    margin-right: 30px;
+    }
+    .header-top button.burger {
+        width: 30px;
+        height: 30px;
+    }
+}

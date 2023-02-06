@@ -167,18 +167,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     try {
         let flyMenu = document.querySelector('.fly-menu');
-        trigger = document.querySelector('#menu-layout button.burger');
-        if (flyMenu && trigger) {
+        triggers = document.querySelectorAll('button.burger');
+        if (flyMenu && triggers.length) {
             let layer = flyMenu.querySelector('.layer'),
             closeTrigger = flyMenu.querySelector('.close');
-            trigger.addEventListener('click', function() {
-                if (flyMenu.classList.contains('active')) {
-                    flyMenuAnimate('close')
-                    bodyOverflow('disable')
-                } else {
-                    flyMenuAnimate('open')
-                    bodyOverflow('enable')
-                }
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    if (flyMenu.classList.contains('active')) {
+                        flyMenuAnimate('close')
+                        bodyOverflow('disable')
+                    } else {
+                        flyMenuAnimate('open')
+                        bodyOverflow('enable')
+                    }
+                })
             })
             closeTrigger.addEventListener('click', function() {
                 flyMenuAnimate('close')
@@ -196,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     } catch (e) {
-
+        console.log(e)
     }
 
 

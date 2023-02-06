@@ -184,12 +184,17 @@ document.addEventListener('DOMContentLoaded', function() {
         direction: 'vertical',
         allowTouchMove: false
     });
+    if (window.innerWidth < 991) {
+        amusementsSwiper2.destroy()
+    }
     let amusementsSwiper = new Swiper(".amusements-swiper", {
-        slidesPerView: 2,
+        slidesPerView: 1,
         loop: true,
         autoplay: {
             delay: 1500,
         },
+
+        grabCursor: true,
         speed: 700,
         spaceBetween: 40,
         pagination: {
@@ -201,10 +206,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 return '<button type="button" class="' + className + '"></button>';
             }
         },
-        direction: 'vertical',
-        allowTouchMove: false
+        direction: 'horizontal',
+        breakpoints: {
+            991: {
+                direction: 'vertical',
+                allowTouchMove: false,
+                grabCursor: false,
+            },
+            550: {
+                slidesPerView: 1,
+            }
+        }
     });
-    amusementsSwiper2.controller.control = this.amusementsSwiper;
+    if (window.innerWidth > 991) {
+        amusementsSwiper2.controller.control = this.amusementsSwiper;
+    }
+    
 
 
 
@@ -237,8 +254,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     let mainPageTariffsSwiper = new Swiper(".main-page-tariffs-swiper", {
-		slidesPerView: 4,
-		spaceBetween: 30,
+		slidesPerView: 1,
+        spaceBetween: 30,
 		grabCursor: true,
 		pagination: {
             el: ".swiper-pagination",
@@ -247,6 +264,18 @@ document.addEventListener('DOMContentLoaded', function() {
             bulletClass: 'star-big',
             renderBullet: function (index, className) {
                 return '<button type="button" class="' + className + '"></button>';
+            }
+        },
+        breakpoints: {
+            991: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            550: {
+                slidesPerView: 2,
+                spaceBetween: 30
             }
         },
 		observeParents: true,
