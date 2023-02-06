@@ -193,7 +193,6 @@ document.addEventListener('DOMContentLoaded', function() {
         autoplay: {
             delay: 1500,
         },
-
         grabCursor: true,
         speed: 700,
         spaceBetween: 40,
@@ -212,9 +211,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 direction: 'vertical',
                 allowTouchMove: false,
                 grabCursor: false,
+                slidesPerView: 2,
             },
             550: {
-                slidesPerView: 1,
+                slidesPerView: 2,
             }
         }
     });
