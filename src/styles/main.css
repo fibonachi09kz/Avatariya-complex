@@ -5380,6 +5380,162 @@ body.about-page section#start {
         margin-top: 60px;
         margin-bottom: 40px;
     }
+    section#amusements .information p.title {
+        font-size: 32px;
+        line-height: 44px;
+        margin-bottom: 20px;
+    }
+    section#amusements .information p.subtitle {
+        font-size: 21px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    section#amusements .information ul li {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+    footer .place-img {
+        display: none;
+    }
+    section#gallery {
+        padding: 60px 0;
+    }
+    section#gallery .gallery-head {
+        flex-wrap: wrap;
+        padding: 0 15px;
+    }
+    section#gallery .gallery-head .flow-img {
+        margin-top: 0;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    section#gallery .gallery-swiper .swiper-slide {
+        width: 200px;
+    }
+    section#gallery .gallery-swiper .swiper-slide.large {
+        width: 350px;
+    }
+    section#gallery .gallery-swiper {
+        height: 130px;
+        margin-bottom: 20px;
+    }
+    section#gallery .gallery-swiper .swiper-slide .layer .icon {
+        width: 40px;
+        height: 40px;
+    }
+    section#gallery .gallery-swiper .swiper-slide .layer .icon svg {
+        width: 20px;
+    }
+    section#gallery .gallery-head .swiper-block {
+        width: 100%;
+    }
+    section#gallery .gallery-head .swiper-block p.title {
+        font-size: 32px;
+        line-height: 44px;
+        margin-bottom: 5px;
+    }
+    section#gallery .gallery-head .swiper-block p.subtitle {
+        font-size: 21px;
+        line-height: 29px;
+        margin-bottom: 10px;
+    }
+    section#gallery .gallery-head .swiper-block .gallery-head-swiper p.text {
+        font-size: 16px;
+        line-height: 34px;
+    }
+    section#reviews {
+        padding: 60px 15px 0;
+    }
+    section#reviews .top {
+        flex-wrap: wrap;
+    }
+    section#reviews .top p.title {
+        font-size: 32px;
+        line-height: 44px;
+        margin-bottom: 20px;
+    }
+    section#reviews .top p.subtitle {
+        font-size: 21px;
+        line-height: 29px;
+    }
+    section#reviews .reviews__swiper {
+        margin-top: 40px;
+    }
+    section#reviews .reviews__swiper .reviews-swiper .swiper-wrapper {
+        height: 245px;
+    }
+    section#reviews .reviews__swiper .swiper-slide .layer .icon {
+        width: 40px;
+        height: 40px;
+    }
+    section#reviews .reviews__swiper .swiper-slide .layer .icon svg {
+        width: 20px;
+    }
+    section#reviews .reviews__swiper .reviews-swiper .swiper-pagination {
+        gap: 30px;
+    }
+    section#reviews .video-reviews {
+        align-items: flex-start;
+        gap: 20px;
+    }
+    section#reviews .video-reviews p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    footer .top {
+        padding: 40px 15px 0;
+        border-radius: 50px 50px 0 0;
+    }
+    footer .top .wrap {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+    footer .top .wrap .block.subscribe {
+        padding-top: 0;
+    }
+    footer .top .wrap .menus {
+        gap: 55px;
+    }
+    footer .top .wrap p.title {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    footer .top .wrap nav a {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    footer .top .wrap .logo {
+        max-width: 108px;
+    }
+    footer .top .wrap ul li {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    footer .top .wrap .tel a {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    footer .top .wrap p.text {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    footer .bottom-wrap {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    section#amusements .repart .am-swiper .swiper-slide {
+        height: auto;
+        justify-content: flex-start;
+    }
+    section#amusements .swiper-slide .bg {
+        top: 0;
+    }
 }
 
 

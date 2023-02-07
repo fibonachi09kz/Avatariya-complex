@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     let reviewsSwiper = new Swiper(".reviews-swiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 1.5,
+        spaceBetween: 20,
         loop: true,
         pagination: {
             el: ".swiper-pagination",
@@ -29,6 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
             bulletClass: 'star-big',
             renderBullet: function (index, className) {
                 return '<button type="button" class="' + className + '"></button>';
+            }
+        },
+        breakpoints: {
+            550: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            991: {
+                slidesPerView: 3,
             }
         }
     });
@@ -151,8 +160,13 @@ document.addEventListener('DOMContentLoaded', function() {
             disableOnInteraction: false
         },
         slidesPerView: "auto",
-        spaceBetween: 30,
-        allowTouchMove: false
+        spaceBetween: 20,
+        allowTouchMove: false,
+        breakpoints: {
+            991: {
+                spaceBetween: 30,
+            }
+        }
     });
     let gallerySwiper2 = new Swiper('.gallery-swiper-2', {
         loop: true,
@@ -163,8 +177,13 @@ document.addEventListener('DOMContentLoaded', function() {
             reverseDirection: true
         },
         slidesPerView: "auto",
-        spaceBetween: 30,
-        allowTouchMove: false
+        spaceBetween: 20,
+        allowTouchMove: false,
+        breakpoints: {
+            991: {
+                spaceBetween: 30,
+            }
+        }
     });
     
 
@@ -193,7 +212,6 @@ document.addEventListener('DOMContentLoaded', function() {
         autoplay: {
             delay: 1500,
         },
-
         grabCursor: true,
         speed: 700,
         spaceBetween: 40,
@@ -212,9 +230,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 direction: 'vertical',
                 allowTouchMove: false,
                 grabCursor: false,
+                slidesPerView: 2,
             },
-            550: {
-                slidesPerView: 1,
+            450: {
+                slidesPerView: 2,
+                spaceBetween: 20,
             }
         }
     });
