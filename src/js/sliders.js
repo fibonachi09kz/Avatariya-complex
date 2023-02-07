@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     let cafeSwiper = new Swiper(".cafe-swiper", {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
         autoplay: {
@@ -76,6 +76,11 @@ document.addEventListener('DOMContentLoaded', function() {
             bulletClass: 'star-small',
             renderBullet: function (index, className) {
                 return '<button type="button" class="' + className + '"></button>';
+            }
+        },
+        breakpoints: {
+            450: {
+                slidesPerView: 2,
             }
         }
     });
