@@ -5536,6 +5536,67 @@ body.about-page section#start {
     section#amusements .swiper-slide .bg {
         top: 0;
     }
+    body.graduation-page #gallery {
+        margin-bottom: 30px;
+    }
+    section#restaurant .wrapper {
+        padding: 0 15px;
+        flex-wrap: wrap;
+    }
+    section#restaurant .wrapper .img {
+        width: 100%;
+        height: auto;
+    }
+    .flow-svg {
+        display: none;
+    }
+    section#restaurant .wrapper h2 {
+        margin-bottom: 20px;
+        font-size: 32px;
+	    line-height: 44px;
+    }
+    section#restaurant .wrapper p.subtitle {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    section#start {
+        padding: 110px 15px 40px;
+        border-radius: 0px 0px 50px 50px;
+    }
+    body.graduation-page #start:after {
+        display: none;
+    }
+    section#start h1 {
+        font-size: 32px;
+        line-height: 42px;
+        margin-top: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    body.graduation-page p.subtitle {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    .breadcrumbs ul li {
+        padding-left: 0;
+    }
+    body.graduation-page .external-form .wrapper {
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+    body.graduation-page .external-form .info-block {
+        margin-top: 0;
+    }
+    body.graduation-page .external-form .wrapper>div {
+        width: 100%;
+        max-width: 600px;
+    }
+    body.graduation-page .external-form .counter-wrapper {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 }
 
 
