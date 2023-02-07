@@ -5833,6 +5833,25 @@ body.about-page section#start {
         line-height: 28px;
         margin-bottom: 20px;
     }
+    #cabinet .top {
+        overflow: auto;
+        padding-bottom: 20px;
+        gap: 0;
+    }
+    #cabinet .top::-webkit-scrollbar {
+        height: 4px;
+    }
+    #cabinet .cabinet-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 0 15px;
+    }
+    #cabinet .cabinet-grid>div {
+        grid-column: auto;
+    }
+    #cabinet .top a {
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 
 
