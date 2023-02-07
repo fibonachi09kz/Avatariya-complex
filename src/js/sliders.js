@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
         direction: 'vertical',
         allowTouchMove: false
     });
-    if (window.innerWidth < 991) {
+    if (window.innerWidth < 991 && amusementsSwiper2.activeIndex != 0) {
         amusementsSwiper2.destroy()
     }
     let amusementsSwiper = new Swiper(".amusements-swiper", {
@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 
     let interestingBlockSwiper = new Swiper(".interesting-block-swiper", {
-		slidesPerView: 2,
+		slidesPerView: 1,
         spaceBetween: 30,
 		grabCursor: true,
         loop: true,
@@ -381,6 +381,11 @@ document.addEventListener('DOMContentLoaded', function() {
 				bindedUpdate()
 			}
 		},
+        breakpoints: {
+            550: {
+                slidesPerView: 2
+            }
+        }
 	});
 
 

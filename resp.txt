@@ -1,2 +1,3 @@
 index.html
 graduation.html
+faq.html

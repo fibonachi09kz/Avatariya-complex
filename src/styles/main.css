@@ -5597,6 +5597,121 @@ body.about-page section#start {
         gap: 20px;
         flex-wrap: wrap;
     }
+    section#start .sub-wrapper p.subtitle {
+        max-width: none;
+        width: 100%;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    section#start .sub-wrapper {
+        margin-top: 0px;
+    }
+    #questions {
+        padding: 0 15px;
+    }
+    .tabs {
+        gap: 15px;
+        flex-wrap: nowrap;
+        overflow: auto;
+        padding-bottom: 20px;
+    }
+    .tabs::-webkit-scrollbar {
+        height: 4px;
+    }
+    .tabs .tab {
+        padding: 5px 15px;
+        white-space: nowrap
+    }
+    .tabs .tab span {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #questions .wrapper {
+        flex-wrap: wrap;
+    }
+    #questions .wrapper .info h3 {
+        font-size: 26px;
+	    line-height: 32px;
+	    margin-bottom: 20px;
+    }
+    #questions .wrapper .info p.subtitle {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    #questions .wrapper .info img {
+        width: 100%;
+        display: block;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .expand-list [data-expand] [data-expand-button] {
+        padding: 10px 25px;
+        gap: 20px;
+    }
+    .expand-list [data-expand] [data-expand-button] p {
+        font-size: 18px;
+	    line-height: 26px;
+    }
+    .expand-list [data-expand] [data-expand-content] {
+        padding: 0px 20px;
+        margin-top: 20px;
+        padding-bottom: 0px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #questions .wrapper .faq-block .bottom p.text {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    #questions .wrapper .faq-block .bottom .phone-block a {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #questions .wrapper .faq-block .bottom .phone-block {
+        gap: 15px;
+    }
+    #interesting .wrapper {
+        flex-wrap: wrap;
+        padding: 0 15px;
+    }
+    #interesting .wrapper .image {
+        width: 100%;
+    }
+    #interesting .wrapper .image .img-wrap {
+        aspect-ratio: 2 / 1;
+        max-height: 300px;
+        margin: 0 auto;
+    }
+    #interesting .wrapper .content {
+        width: 100%;
+    }
+    #interesting .wrapper .content h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #interesting .wrapper .content p.subtitle {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    #interesting .wrapper .content .swiper-slide {
+        height: auto;
+    }
+    #interesting .wrapper .content .swiper-slide .item {
+        height: 100%;
+    }
+    #interesting .wrapper .content .swiper-control-wrapper .swiper-button-next {
+        display: none;
+    }
+    #interesting .wrapper .content .swiper-control-wrapper .swiper-button-prev {
+        display: none;
+    }
+    #interesting {
+        margin-bottom: 60px;
+    }
 }
 
 
@@ -5616,3 +5731,4 @@ body.about-page section#start {
         height: 30px;
     }
 }
+
