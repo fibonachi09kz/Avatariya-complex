@@ -494,6 +494,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }   
 
 
+    // Динамически адаптивные таблицы
+    {
+        let tables = document.querySelectorAll('.adaptive-table table');
+        if (tables.length) {
+            tables.forEach((table) => {
+                let thtd = table.querySelectorAll('thead td');
+                let tbtr = table.querySelectorAll('tbody tr');
+                if (thtd.length && tbtr.length) {
+                    tbtr.forEach((tr) => {
+                        let trtd = tr.querySelectorAll('td');
+                        if (trtd.length) {
+                            let trArr = Array.from(trtd)
+                            trtd.forEach((td) => {
+                                let index = trArr.indexOf(td)
+                                let title = thtd[index].textContent
+                                let bTitle = document.createElement("b")
+                                bTitle.textContent = title
+                                td.prepend(bTitle)
+                            })
+                        }
+                    })
+                }
+            })
+            
+            
+            
+        }
+    }
+
+
+
+
+
+
+
+
+
 
     try {
         let dev = document.createElement('developer');

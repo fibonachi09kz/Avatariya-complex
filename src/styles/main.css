@@ -3178,6 +3178,7 @@ body.order-success-v2-page #start .sub-wrapper .success-img {
 }
 ::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
 }
 ::-webkit-scrollbar-track {
     background: var(--primary-pink-3);
@@ -4253,11 +4254,17 @@ table.ui-table thead {
 
 }
 table.ui-table thead td {
-    padding: 10px 0;
+    padding: 10px;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 19px;
 	color: #000000;
+}
+table.ui-table thead tr td:first-child {
+    padding: 10px 10px 10px 0;
+}
+table.ui-table thead tr td:last-child {
+    padding: 10px 0 10px 10px;
 }
 table.ui-table tbody tr {
     border-bottom: 1px solid #EAEAEA;
@@ -4270,7 +4277,13 @@ table.ui-table tbody td {
     font-size: 14px;
     line-height: 19px;
     color: #000000;
-    padding: 10px 0;
+    padding: 10px;
+}
+table.ui-table tbody tr td:first-child {
+    padding: 10px 10px 10px 0;
+}
+table.ui-table tbody tr td:last-child {
+    padding: 10px 0 10px 10px;
 }
 #cabinet .childrens a.edit-link {
     display: flex;
@@ -5835,7 +5848,7 @@ body.about-page section#start {
     }
     #cabinet .top {
         overflow: auto;
-        padding-bottom: 20px;
+        padding: 0 10px 20px 10px;
         gap: 0;
     }
     #cabinet .top::-webkit-scrollbar {
@@ -5921,27 +5934,80 @@ body.about-page section#start {
         gap: 20px;
         flex-wrap: wrap;
     }
-    table.ui-table thead {
+    .adaptive-table table.ui-table thead {
         display: none;
     }
-    table.ui-table tbody tr {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 5px 0;
-    }
-    table.ui-table tbody td {
+    .adaptive-table table.ui-table tbody tr {
         display: block;
-        padding: 5px;
-        flex: 1 1 50%;
+        padding: 10px 0;
     }
-    table.ui-table tbody td:nth-child(even) {
-        text-align: right;
+    .adaptive-table table.ui-table tbody td {
+        display: block;
+        padding: 0 0 5px 0 !important;
     }
-    table.ui-table tbody td:first-child {
-        font-weight: 600;
+    .adaptive-table table.ui-table tbody tr td:first-child {
+        padding: 0;
+    }
+    .adaptive-table table.ui-table tbody tr td:last-child {
+        padding: 0 !important;
     }
     #cabinet .childrens .info {
         flex: 1 1 auto;
+    }
+    .scroll-table {
+        overflow: auto;
+        white-space: nowrap;
+        margin-bottom: 20px;
+    }
+    .adaptive-table td b {
+        display: block;
+    }
+    #cabinet .orders {
+        padding: 20px;
+    }
+    #cabinet .childrens a.edit-link p {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #cabinet .childrens .children-add {
+        padding: 20px;
+    }
+    #cabinet .childrens .children-add p {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #cabinet .childrens .children-add a {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #cabinet .orders a.orders-link {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #cabinet {
+        padding: 40px 0;
+    }
+    #cabinet .profile-block {
+        padding: 0 15px;
+    }
+    #cabinet .profile-info {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    #cabinet .profile-wrap form .wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 5px;
+    }
+    #cabinet .profile-wrap form .avatar-block .action {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #cabinet .password-block {
+        padding: 20px;
+    }
+    .input__wrapper label {
+        margin-bottom: 0;
+        font-size: 16px;
     }
 }
 
