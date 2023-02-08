@@ -5852,6 +5852,97 @@ body.about-page section#start {
         font-size: 16px;
         line-height: 22px;
     }
+    #cabinet .main-info h4 {
+        font-size: 26px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+    #cabinet .main-info .field p, #cabinet .main-info .field.phone a {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #cabinet .main-info .field.email a {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #cabinet .main-info a.edit-link {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #cabinet .bonuses h4 {
+        font-size: 26px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+    #cabinet .bonuses p.descr {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    #cabinet .bonuses .field-line {
+        flex-wrap: wrap;
+	    gap: 20px;
+    }
+    #cabinet .bonuses .bonus-field .bonus-counter {
+        flex: none;
+    }
+    #cabinet .bonuses .bonus-field {
+        flex-wrap: wrap;
+    }
+    #cabinet .bonuses .bonus-fired {
+        width: 100%;
+    }
+    #cabinet .bonuses .field-line p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #cabinet .bonuses .bonus-field p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #cabinet .bonuses a.bonus-instruction {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #cabinet .main-info {
+        padding: 20px;
+    }
+    #cabinet .bonuses {
+        padding: 20px;
+    }
+    #cabinet .childrens {
+        padding: 20px;
+    }
+    #cabinet .childrens h4 {
+        font-size: 26px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+    #cabinet .childrens .wrapper {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    table.ui-table thead {
+        display: none;
+    }
+    table.ui-table tbody tr {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px 0;
+    }
+    table.ui-table tbody td {
+        display: block;
+        padding: 5px;
+        flex: 1 1 50%;
+    }
+    table.ui-table tbody td:nth-child(even) {
+        text-align: right;
+    }
+    table.ui-table tbody td:first-child {
+        font-weight: 600;
+    }
+    #cabinet .childrens .info {
+        flex: 1 1 auto;
+    }
 }
 
 
