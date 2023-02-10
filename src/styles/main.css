@@ -5695,7 +5695,7 @@ body.about-page section#start {
         width: 100%;
     }
     #interesting .wrapper .image .img-wrap {
-        aspect-ratio: 2 / 1;
+        aspect-ratio: auto;
         max-height: 300px;
         margin: 0 auto;
     }
@@ -6009,6 +6009,9 @@ body.about-page section#start {
         margin-bottom: 0;
         font-size: 16px;
     }
+    #cabinet .childrens-block {
+        padding: 20px;
+    }
 }
 
 
@@ -6046,9 +6049,21 @@ body.about-page section#start {
     }
     
 }
+@media (max-width: 678px) {
+    #cabinet .childrens-block .item {
+        flex-direction: column;
+        gap: 0;
+    }
+    #cabinet .childrens-block .item .delete-child {
+        margin-left: auto;
+    }
+}
 @media (max-width: 550px) {
     #mini-news .mini-news-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    #cabinet .childrens-block .actions {
+        flex-direction: column-reverse;
     }
 }
 @media (max-width: 450px) {

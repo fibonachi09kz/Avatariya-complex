@@ -1,8 +1,10 @@
 index.html
-graduation.html
+graduat­ion.html
 faq.html
 detail-page
 contact
 cafe
 cabinet
 cabinet-profile
+cabinet-orders.html
+cabinet-childrens.html
