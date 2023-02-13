@@ -43,8 +43,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Плавающее меню в шапке
     try {
         let elem = document.querySelector('#menu-layout');
-        if (elem) {
+        let minimenu = document.querySelector('.fly-minimenu');
+
+        if (elem && minimenu) {
+            let currentPosition = window.pageYOffset;
+            let minimenuPosition = minimenu.getBoundingClientRect().top + document.body.scrollTop;
+            console.log(minimenuPosition)
+
             
+            if (currentPosition > 121) {
+                elem.classList.add('fixed')
+            }
+            window.addEventListener('scroll', function() {
+                console.log(scrollY)
+                if (scrollY < 121) {
+                    elem.classList.remove('fixed')
+                } else if (scrollY + 100 >= minimenuPosition) {
+                    elem.classList.remove('fixed')
+                } else {
+                    elem.classList.add('fixed')
+                }
+            });
+            return
+        }
+
+        if (elem) {
             let currentPosition = window.pageYOffset;
             if (currentPosition > 121) {
                 elem.classList.add('fixed')
@@ -57,6 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+
+        
     } catch (e) {
         console.log(e)
     }
@@ -523,6 +548,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    //подложка на buy-ticket
+    {
+        let layer = document.querySelector('body #start .bottom-bg');
+        let layerBase = document.querySelector('form.start .summary');
+        if (layer && layerBase) {
+            layer.style.height = layerBase.offsetHeight + 60 + 'px'
+        }
+    }
 
 
 

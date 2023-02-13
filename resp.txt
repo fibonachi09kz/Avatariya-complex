@@ -1,5 +1,5 @@
 index.html
-graduat­ion.html
+graduation.html
 faq.html
 detail-page
 contact
@@ -8,3 +8,17 @@ cabinet
 cabinet-profile
 cabinet-orders.html
 cabinet-childrens.html
+buy-ticket-2.html
+buy-ticket-1.html
+birthday.html
+birthday-ticket.html
+big-gallery.html
+404.html
+login.html
+news.html
+order-1.html
+order-success-v2.html
+order-success.html
+registration.html
+reviews.html
+stocks.html

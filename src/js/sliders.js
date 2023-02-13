@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     let selectorGallerySwiper = new Swiper(".selector-gallery-swiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 1,
+        spaceBetween: 20,
         grabCursor: true,
         pagination: {
             el: ".swiper-pagination",
@@ -138,6 +138,15 @@ document.addEventListener('DOMContentLoaded', function() {
             bulletClass: 'star-small',
             renderBullet: function (index, className) {
                 return '<button type="button" class="' + className + '"></button>';
+            }
+        },
+        breakpoints: {
+            400: {
+                slidesPerView: 2,
+            },
+            678: {
+                slidesPerView: 3,
+                spaceBetween: 30,
             }
         }
     });
@@ -317,6 +326,27 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 
 
+    
+
+
+    let vacsSwiper = new Swiper(".vacs-swiper", {
+		slidesPerView: 1,
+        spaceBetween: 40,
+		grabCursor: true,
+		on: {
+			init: function (swiper) {
+				let bindedInit = swiperOverInit.bind(swiper)
+                bindedInit()
+			},
+			update: function (swiper) {
+                let bindedUpdate = swiperOverUpdate.bind(swiper)
+				bindedUpdate()
+			}
+		},
+	});
+
+
+
     let animatorsSwiper = new Swiper(".animators-swiper", {
 		slidesPerView: 4,
 		spaceBetween: 30,
@@ -398,8 +428,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let parkRulesSwiper = new Swiper(".park-rules-swiper", {
 		slidesPerView: 1,
 		grabCursor: true,
-        direction: 'vertical',
+        direction: 'horizontal',
         loop: true,
+        breakpoints: {
+            991: {
+                direction: 'vertical',
+            }
+        },
 		on: {
 			init: function (swiper) {
 				let bindedInit = swiperOverInit.bind(swiper)
@@ -423,19 +458,20 @@ document.addEventListener('DOMContentLoaded', function() {
         loop: true,
 		observeParents: true,
         effect: 'coverflow',
+        pagination: {
+            el: '#history-pagination',
+            bulletActiveClass: 'active',
+            bulletClass: 'year',
+            clickable: true,
+            renderBullet: function (index, className) {
+                let currentYear = this.slides[index].getAttribute('year')
+                return '<button class="' + className + '"><p>' + currentYear + '</p><span class="star-big"></span></button>';
+            }
+        },
 		on: {
 			init: function (swiper) {
 				let bindedInit = swiperOverInit.bind(swiper)
                 bindedInit()
-                this.params.pagination.el = this.el.closest('.swiper-control-wrapper').querySelector('.swiper-pagination');
-                this.params.pagination.bulletActiveClass = 'active';
-                this.params.pagination.bulletClass = 'year';
-                this.params.pagination.clickable = true;
-                this.params.pagination.renderBullet = function (index, className) {
-                    let currentYear = this.slides[index].getAttribute('year')
-                    return '<button class="' + className + '"><p>' + currentYear + '</p><span class="star-big"></span></button>';
-                }
-                this.pagination.init()
 			},
 			update: function (swiper) {
                 let bindedUpdate = swiperOverUpdate.bind(swiper)
@@ -443,7 +479,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		},
 	});
-
 
 
 

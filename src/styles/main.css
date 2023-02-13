@@ -1939,7 +1939,7 @@ section#park-rules .top {
 }
 section#park-rules .top .img {
     height: 344px;
-    flex: 1;
+    flex: 1 1 250px;
     border-radius: 30px;
     overflow: hidden;
 }
@@ -1982,6 +1982,7 @@ section#park-rules .swiper .swiper-slide {
     height: 100%;
     background: rgba(255, 255, 255, 0.8);
     padding: 30px;
+    width: 100% !important;
 }
 section#park-rules .swiper .swiper-slide .wrap {
     display: flex;
@@ -5128,6 +5129,243 @@ body.about-page section#start {
 	justify-content: center;
 	gap: 30px;
 }
+#team .vacancies {
+    background: #F5F5F5;
+    padding: 80px 0;
+}
+#team .vacancies .wrapper {
+    display: flex;
+    gap: 30px;
+}
+#team .vacancies .img {
+    width: 50%;
+    border-radius: 30px;
+    height: auto;
+    overflow: hidden;
+    flex: none;
+}
+#team .vacancies .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+#team .vacancies .info {
+    width: 50%;
+    flex: none;
+}
+#team .vacancies h3 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 57px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+#team .vacancies p.subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+#team .vacancies .swiper-slide {
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 30px;
+}
+#team .vacancies .swiper-slide .top {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#team .vacancies .swiper-slide .top h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+#team .vacancies .swiper-slide .top p.text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+#team .vacancies .swiper-slide .top .logo {
+    max-width: 55px;
+}
+#team .vacancies .swiper-slide .top .b-block {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    align-items: center;
+}
+#team .vacancies .swiper-slide .top .logo img {
+    width: 100%;
+}
+#team .vacancies .swiper-slide .bottom p.salary {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+#team .vacancies .swiper-slide .bottom p.descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000; 
+}
+#team .vacancies .swiper-control-wrapper .actions {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+#team .vacancies .swiper-control-wrapper .swiper-button-prev {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 30px 0 0;
+}
+#team .vacancies .swiper-control-wrapper .swiper-button-next {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto 0 0;
+}
+#team .not-found-vac {
+    background: #EDEDED;
+    padding: 60px 0;
+}
+#team .not-found-vac .wrapper {
+    max-width: 880px;
+    margin: 0 auto;
+}
+#team .not-found-vac h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 10px;
+}
+#team .not-found-vac p.subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+}
+#team .not-found-vac button {
+    margin: 0 auto;
+}
+#team .reqs {
+    padding: 80px 0;
+}
+#team .reqs .wrapper {
+    display: flex;
+    gap: 30px;
+}
+#team .reqs .wrapper > div {
+    width: 50%;
+    flex: none;
+    height: auto;
+}
+#team .reqs h3 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 57px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+#team .reqs p.subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+#team .reqs .img {
+    width: 100%;
+}
+#team .reqs .img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+#team .reqs .wrapper .block {
+    margin-top: 90px;
+}
+#team .reqs .wrapper .line {
+    margin-bottom: 20px;
+}
+#team .reqs .wrapper .block .line:last-child {
+    margin-bottom: 0;
+}
+#team .reqs .wrapper .line label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #B0B0B0;
+    margin-bottom: 5px;
+}
+#team .reqs .wrapper .line p.value {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+#team .reqs .wrapper {
+    position: relative;
+}
+#team .reqs .wrapper .flow-bg {
+    left: 50%;
+	transform: translateX(585px);
+	top: -145px;
+	position: absolute;
+	display: block;
+}
+
+.fly-minimenu {
+    background: #F5F5F5;
+	padding: 12px;
+	position: sticky;
+	z-index: 999;
+	top: 0;
+	box-shadow: 0 1px 8px 2px #d2d2d2;
+}
+.fly-minimenu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fly-minimenu ul li {
+    padding: 0;
+    padding-bottom: 5px;
+    transition: 0.15s all;
+    border-bottom: 3px solid transparent;
+}
+.fly-minimenu ul li a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #B9B9B9;
+    padding: 15px 0 10px 0;
+	display: block;
+    text-decoration: none;
+}
+.fly-minimenu ul li:hover {
+    border-bottom: 3px solid var(--primary-pink-1);
+}
+.fly-minimenu ul li:hover a {
+    color: var(--primary-pink-1);
+}
+
+
 
 
 
@@ -5470,8 +5708,8 @@ body.about-page section#start {
         margin-bottom: 20px;
     }
     section#reviews .top p.subtitle {
-        font-size: 21px;
-        line-height: 29px;
+        font-size: 16px;
+        line-height: 30px;
     }
     section#reviews .reviews__swiper {
         margin-top: 40px;
@@ -5570,7 +5808,7 @@ body.about-page section#start {
     }
     section#restaurant .wrapper p.subtitle {
         font-size: 16px;
-        line-height: 28px;
+        line-height: 30px;
         margin-bottom: 30px;
     }
     section#start {
@@ -6012,6 +6250,501 @@ body.about-page section#start {
     #cabinet .childrens-block {
         padding: 20px;
     }
+    form.start .wrapper .input__wrapper {
+        flex: 1 0 300px;
+    }
+    form.start .summary {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    form.start .summary .settings {
+        width: 100%;
+    }
+    form.start .summary .settings .settings-wrapper {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    form.start .summary .settings .settings-wrapper .counter-box {
+        flex: 1;
+    }
+    form.start .summary .summ {
+        margin: 0 auto;
+        font-size: 32px;
+        line-height: 44px;
+    }
+    form.start .action {
+        margin: 0 auto;
+        padding: 10px;
+    }
+    form.start .summary .settings p.park-name {
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    form.start .summary .img {
+        margin: 0 auto;
+    }
+    .counter-box label {
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 38px;
+        margin-bottom: 0;
+    }
+    body.buy-ticket-page #start {
+        margin-bottom: 100px;
+    }
+    body.birthday-page #tariffs {
+        padding-top: 50px;
+    }
+    body.birthday-page #tariffs .title-block {
+        margin-bottom: 20px;
+    }
+    section#park-rules .top-rules {
+        padding: 40px 15px;
+    }
+    section#park-rules .top {
+        flex-wrap: wrap;
+    }
+    section#park-rules .top h2 {
+        font-size: 26px;
+	    line-height: 32px;
+	    margin-bottom: 20px;
+    }
+    section#park-rules .top p.subtitle {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    section#park-rules .swiper {
+        height: auto;
+    }
+    section#park-rules .top .img {
+        height: auto;
+        flex: 1 1 250px;
+        max-width: 350px;
+        margin: 0 auto;
+        aspect-ratio: 1 / 1;
+    }
+    section#park-rules .bottom {
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+    section#park-rules .bottom .block p.title {
+        font-size: 26px;
+	    line-height: 32px;
+    }
+    ol {
+        font-size: 16px;
+	    line-height: 26px;
+    }
+    section#park-rules .swiper .swiper-slide .wrap {
+        gap: 15px;
+    }
+    section#park-rules .swiper .swiper-slide .wrap p.text {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    section#park-rules .swiper .swiper-slide {
+        padding: 20px;
+    }
+    section#park-rules .swiper .swiper-slide .wrap .num {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+	    line-height: 50px;
+    }
+    section#park-rules .bottom-rules {
+        padding: 60px 15px;
+    }
+    section#park-rules .bottom-rules h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    section#park-rules .bottom-rules .wrapper .item {
+        flex: 1 1 300px;
+        padding: 20px 50px 20px 20px;
+        gap: 20px;
+    }
+    section#park-rules .bottom-rules .wrapper .item p.text {
+        font-size: 16px;
+	    line-height: 24px;
+    }
+    section#admin-alert {
+        padding: 40px 15px;
+    }
+    section#admin-alert p.text {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    body.birthday-page section#gallery {
+        margin-bottom: 100px;
+    }
+    #ex-elems .ex-elems-swiper .swiper-slide .icon {
+        width: 50px;
+        height: 50px;
+    }
+    #ex-elems .ex-elems-swiper .swiper-slide {
+        padding: 20px;
+    }
+    #ex-elems .ex-elems-swiper .swiper-wrapper {
+        height: auto;
+    }
+    #ex-elems {
+        padding: 40px 15px;
+    }
+    #selector-gallery {
+        margin-bottom: 40px;
+    }
+    #selector-gallery .wrapper {
+        padding: 0 15px;
+        flex-wrap: wrap;
+    }
+    #selector-gallery .wrapper .selectors-block {
+        max-width: none;
+    }
+    #selector-gallery .selector-gallery-swiper .swiper-slide .img {
+        height: 130px;
+    }
+    #selector-gallery .photo-block .img {
+        height: 100%;
+    }
+    #selector-gallery .photo-block {
+        width: 100%;
+    }
+    #selector-gallery .wrapper .selectors-block h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #selector-gallery .wrapper .selectors-block p.subtitle {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    #video-content {
+        margin-bottom: 100px;
+        padding: 40px 15px;
+    }
+    #video-content .wrapper {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    #video-content .info {
+        width: 100%;
+    }
+    #video-content .wrapper .img .flow-1 {
+        display: none;
+    }
+    #video-content .wrapper .img .flow-2 {
+        display: none;
+    }
+    #video-content .wrapper .img .flow-3 {
+        display: none;
+    }
+    #video-content .wrapper .img .wrap {
+        height: 100%;
+    }
+    #video-content .wrapper .img {
+        max-width: none;
+    }
+    #video-content .wrapper .img .flow-svg {
+        display: none;
+    }
+    #video-content .info h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #video-content .info p.subtitle {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    #video-content .info .swiper-control-wrapper {
+        padding: 20px;
+    }
+    #video-content .info .swiper-control-wrapper .f-play p {
+        font-size: 16px;
+	    line-height: 24px;
+    }
+    #video-content .info .swiper-control-wrapper .swiper {
+        padding: 10px;
+    }
+    #video-content .info .swiper-control-wrapper .swiper-button-next {
+        top: 130%;
+    }
+    #video-content .info .swiper-control-wrapper .swiper-button-prev {
+        top: 130%;
+    }
+    #selector-gallery .selector-gallery-swiper .swiper-slide p.title {
+        font-size: 16px;
+    }
+    body.v-404-page #start .ex-wrapper {
+        flex-wrap: wrap;
+    }
+    #login {
+        padding: 40px 15px;
+    }
+    #login .wrapper {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    #login .wrapper .info {
+        width: 100%;
+    }
+    #login .wrapper form {
+        width: 100%;
+        padding: 20px;
+    }
+    #login .wrapper form .check-line {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    #login .wrapper form .actions {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #login .wrapper .info h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #login .wrapper .info p.descr {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    #login .wrapper .info img {
+        margin: 0 auto;
+    }
+    #mega-news {
+        margin-top: 40px;
+	    margin-bottom: 40px;
+        padding: 0 15px;
+    }
+    
+    #mega-news .news-list .news-item p.text {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #mega-news .news-list .news-item {
+        padding: 20px;
+    }
+    .pagination {
+        gap: 30px;
+    }
+    .pagination .pages {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .pagination .page:nth-child(3), .pagination .page:nth-child(4), .pagination .page:nth-child(5) {
+        display: none;
+    }
+    section#start-custom {
+        border-radius: 0px 0px 50px 50px;
+        margin-bottom: 100px;
+        padding-top: 110px;
+    }
+    section#start-custom h1 {
+        font-size: 32px;
+        line-height: 42px;
+        margin-top: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    section#start-custom > .container {
+        padding: 0 15px;
+    }
+    section#start-custom p.subtitle {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    section#start-custom .start-bottom {
+        margin-top: 40px;
+        padding: 40px 15px;
+    }
+    section#start-custom .start-bottom .wrapper {
+        flex-wrap: wrap;
+    }
+    section#start-custom .start-bottom .infoblock p.title {
+        font-size: 28px;
+	    line-height: 36px;
+	    margin-bottom: 20px;
+    }
+    section#start-custom .start-bottom .infoblock p.descr {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    section#start-custom .start-bottom .infoblock .info img {
+        width: 100%;
+    }
+    section#start-custom .start-bottom .pay-block {
+        padding: 20px;
+    }
+    section#start-custom .start-bottom .pay-block p.title {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    section#start-custom .start-bottom .pay-block p.descr {
+        font-size: 16px;
+	    line-height: 26px;
+        margin-bottom: 20px;
+    }
+    body.order-success-v2-page #start .sub-wrapper .success-img {
+        max-width: 400px;
+        margin-top: 0;
+        margin: 0 auto; 
+    }
+    body.order-success-v2-page #start .sub-wrapper .success-img img {
+        width: 100%;
+    }
+    body.order-success-page #start .sub-wrapper {
+        gap: 20px;
+        flex-wrap: wrap
+    }
+    body.order-success-page #start .sub-wrapper .success-badge {
+        margin-top: 0;
+        width: 100px;
+	    height: 100px;
+    }
+    body.order-success-page #start .sub-wrapper .success-badge svg {
+        width: 40px;
+    }
+    #features-v2 {
+        margin-bottom: 40px;
+        padding: 0 15px
+    }
+    .hystmodal__window {
+        padding: 70px 30px;
+        border-radius: 30px;
+    }
+    .hystmodal__wrap {
+        padding: 20px;
+    }
+    .hystmodal__close {
+        width: 15px;
+        height: 15px;
+        top: 30px;
+        right: 30px;
+    }
+    .hystmodal__content h3 {
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 20px;
+    }
+    .hystmodal__content p.subtitle {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    .hystmodal__content p.text {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    .hystmodal__content .frame {
+        padding: 20px;
+    }
+    .hystmodal__content .qr-bg {
+        width: 100%;
+    }
+    #registration {
+        padding: 40px 15px;
+    }
+    #registration .wrapper {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    #registration .wrapper .info {
+        width: 100%;
+    }
+    #registration .wrapper form {
+        width: 100%;
+        padding: 20px
+    }
+    #registration .wrapper .info h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #registration .wrapper .info p.descr {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    #registration .wrapper .info img {
+        margin: 0 auto;
+    }
+    #registration .wrapper form .actions {
+        flex-wrap: wrap;
+	    justify-content: center;
+        gap: 20px;
+    }
+    #video-reviews {
+        margin-top: 0px;
+        margin-bottom: 100px;
+        padding: 0 15px;
+    }
+    #video-reviews .wrapper {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    #video-reviews .wrapper .info {
+        width: 100%;
+    }
+    #video-reviews .wrapper .reviews-action {
+        width: 100%;
+    }
+    #video-reviews .wrapper .reviews-action .tabs-top {
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 10px;
+    }
+    #video-reviews .wrapper .info h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #video-reviews .wrapper .info p.subtitle {
+        font-size: 16px;
+	    line-height: 30px;
+	    margin-bottom: 20px;
+    }
+    #video-reviews .wrapper .info p.subtext {
+        font-size: 16px;
+	    line-height: 30px;
+	    margin-bottom: 20px;
+    }
+    #video-reviews .wrapper .reviews-action .swiper-control-wrapper {
+        padding: 10px 20px;
+    }
+    #video-reviews .wrapper .reviews-action .swiper-control-wrapper .swiper {
+        padding: 10px;
+    }
+    #video-reviews .wrapper .reviews-action .swiper-control-wrapper .f-play p span.name {
+        font-size: 16px;
+	    line-height: 24px;
+    }
+    #video-reviews .wrapper .reviews-action .swiper-control-wrapper .f-play p span.city {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #video-reviews .wrapper .reviews-action .swiper-control-wrapper .swiper-button-next {
+        top: 130%;
+    }
+    #video-reviews .wrapper .reviews-action .swiper-control-wrapper .swiper-button-prev {
+        top: 130%;
+    }
+    #mega-stocks {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+    #mega-stocks .stocks-list {
+        gap: 20px;
+    }
 }
 
 
@@ -6047,7 +6780,22 @@ body.about-page section#start {
     #mini-news .news-item .img {
         aspect-ratio: 2 / 1.2;
     }
-    
+    #features-v2 .fea .block {
+        padding: 25px 20px;
+    }
+    #mega-stocks .stocks-list .stocks-item p.text {
+        font-size: 16px;
+	    line-height: 24px;
+        -webkit-line-clamp: 3;
+    }
+    #mega-stocks .stocks-list .stocks-item .date {
+        font-size: 16px;
+	    line-height: 20px;
+	    margin-bottom: 5px;
+    }
+    #mega-stocks .stocks-list .stocks-item {
+        padding: 20px;
+    }
 }
 @media (max-width: 678px) {
     #cabinet .childrens-block .item {
@@ -6057,9 +6805,24 @@ body.about-page section#start {
     #cabinet .childrens-block .item .delete-child {
         margin-left: auto;
     }
+    
+    #features-v2 .fea {
+        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    #features-v2 .fea .block p.descr {
+        font-size: 16px;
+	    line-height: 24px;
+    }
 }
 @media (max-width: 550px) {
     #mini-news .mini-news-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    #mega-news .news-list {
+        gap: 20px;
+    }
+    #mega-news .news-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     #cabinet .childrens-block .actions {
@@ -6068,6 +6831,18 @@ body.about-page section#start {
 }
 @media (max-width: 450px) {
     #mini-news .mini-news-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    #mega-news .news-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    form.start .wrapper {
+        gap: 0;
+    }
+    #features-v2 .fea {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    #mega-stocks .stocks-list {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
