@@ -4689,9 +4689,14 @@ body.about-page section#start {
     left: -84px;
 	bottom: -36px;
 }
-#about-block .img .img-wrapper {
+#about-block .img .img-wrap {
     border-radius: 30px;
     overflow: hidden;
+}
+#about-block .img .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #about-block h3 {
     font-weight: 700;
@@ -4936,7 +4941,7 @@ body.about-page section#start {
     transform: translateX(-50%) translateY(-5px);
 }
 #history {
-    margin-bottom: 80px;
+    
 }
 #history .history-swiper .swiper-slide {
     position: relative;
@@ -5051,7 +5056,6 @@ body.about-page section#start {
 #team .middle-gallery {
     border-radius: 100px 100px 0px 0px;
     overflow: hidden;
-    min-height: 941px;
 }
 #team .middle-gallery .swiper-slide img {
     width: 100%;
@@ -5328,6 +5332,69 @@ body.about-page section#start {
 	position: absolute;
 	display: block;
 }
+#team .middle-ex {
+    padding-top: 60px;
+}
+#team .middle-ex .tabs {
+    margin-bottom: 40px;
+}
+#team .middle-ex .people {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+#team .middle-ex .people .imgWrapper {
+    position: relative;
+    width: 370px;
+    flex: none;
+}
+#team .middle-ex .people .imgWrapper .flow-svg {
+    position: absolute;
+    bottom: -40px;
+    left: -85px;
+}
+#team .middle-ex .people .imgWrapper .img {
+    overflow: hidden;
+    border-radius: 30px;
+}
+#team .middle-ex .people .imgWrapper .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#team .middle-ex .people h4 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+#team .middle-ex .people blockquote {
+    padding-left: 60px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 34px;
+    color: #000000;
+    position: relative;
+}
+#team .middle-ex .people blockquote:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    flex: none;
+    background: url(/src/media/about/blockquote.svg) center center/cover no-repeat;
+}
+
+
+
+
+
+
+
 
 .fly-minimenu {
     background: #F5F5F5;
@@ -5365,8 +5432,18 @@ body.about-page section#start {
     color: var(--primary-pink-1);
 }
 
-
-
+#subtext {
+    padding: 60px 0;
+}
+#subtext p {
+    max-width: 770px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 42px;
+    text-align: center;
+    color: #000000;
+}
 
 
 
@@ -5399,6 +5476,23 @@ body.about-page section#start {
 }
 .header-top button.burger {
     display: none;
+}
+@media (max-width: 1280px) {
+    #team .vacancies .img {
+        width: 300px;
+    }
+    #team .vacancies .info {
+        width: calc(100% - 330px);
+    }
+    #team .vacancies .img img {
+        object-fit: cover;
+    }
+    #team .vacancies {
+        padding: 40px 15px;
+    }
+    #team .vacancies .swiper-slide .top .logo {
+        width: 55px;
+    }
 }
 @media (max-width: 991px) {
     #menu-layout {
@@ -6745,6 +6839,316 @@ body.about-page section#start {
     #mega-stocks .stocks-list {
         gap: 20px;
     }
+    
+    .fly-minimenu {
+        display: none;
+    }
+    #features-v2 .fea {
+        margin-bottom: 0;
+    }
+    #about-block {
+        padding: 20px 0;
+    }
+    #about-block .wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 0 15px;
+    }
+    #about-block .img .img-wrap {
+        max-height: 350px;
+    }
+    #about-block h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #about-block p.subtitle {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    #children-growth {
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+    #children-growth h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #children-growth .item {
+        padding: 30px 20px;
+    }
+    #children-growth .item h4 {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+    #children-growth .item p.text {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #privilege {
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+    #privilege h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #privilege .wrapper .title {
+        font-size: 21px;
+	    line-height: 26px;
+        gap: 10px;
+    }
+    #privilege .wrapper .title svg {
+        width: 25px;
+    }
+    #privilege .wrapper ul li {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #avatariya-line-anim {
+        margin-bottom: 40px;
+    }
+    #our-parks {
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+    #our-parks .wrapper {
+        gap: 20px;
+	    grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    #our-parks h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #our-parks p.subtitle {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    #our-parks .item .img {
+        aspect-ratio: auto;
+        margin-bottom: 10px;
+        max-height: 200px;
+    }
+    #our-parks .item .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #our-parks .item p.title {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #history {
+        padding: 40px 15px;
+    }
+    #history .history-swiper-wrapper .swiper-pagination {
+        display: none;
+    }
+    #history .history-swiper-wrapper .container.navigation {
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+    #history h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #history .history-swiper-wrapper .container {
+        padding-top: 0;
+        margin-top: 0;
+    }
+    #history .history-swiper .swiper-slide .wrapper {
+        gap: 20px;
+	    grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    #history .history-swiper .swiper-slide .img {
+        margin-top: 0;
+        max-height: 200px;
+    }
+    #history .history-swiper .swiper-slide h4 {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+    #history .history-swiper .swiper-slide p.text {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    #team .top-info {
+        padding: 40px 15px;
+    }
+    #team .top-info .wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+    }
+    #team .top-info .img {
+        overflow: hidden;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    #team .top-info .info h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #team .top-info .info p.text {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    #team .middle-gallery {
+        border-radius: 50px 50px 0px 0px;
+    }
+    #team .middle-ex {
+        padding: 20px 15px 0;
+    }
+    #team .middle-ex .tabs {
+        margin-bottom: 20px;
+    }
+    #team .middle-ex .people {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    #team .middle-ex .people .imgWrapper {
+       width: 100%;
+       max-width: 300px; 
+    }
+    #team .middle-ex .people h4 {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+    #team .middle-ex .people blockquote {
+        padding-left: 30px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    #team .middle-ex .people blockquote:before {
+        width: 20px;
+        height: 20px;
+    }
+    #team .descr-block {
+        padding: 0 15px;
+    }
+    #team .descr-block p {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+    }
+    #team .animators {
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+    #team .animators h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #team .animators .swiper-pagination {
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    #team .animators .swiper-button-next {
+        display: none;
+    }
+    #team .animators .swiper-button-prev {
+        display: none;
+    }
+    #team .vacancies .wrapper {
+        display: block;
+    }
+    #team .vacancies .info {
+        width: 100%;
+    }
+    #team .vacancies h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #team .vacancies p.subtitle {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    #team .vacancies .img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+    #team .vacancies .swiper-slide {
+        padding: 20px;
+    }
+    #team .vacancies .swiper-slide .top {
+        flex-wrap: wrap;
+    }
+    #team .vacancies .swiper-slide .bottom p.descr {
+        font-size: 16px;
+	    line-height: 24px;
+    }
+    #team .not-found-vac {
+        padding: 40px 15px;
+    }
+    #team .not-found-vac h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #team .not-found-vac p.subtitle {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    #team .reqs {
+        padding: 40px 15px;
+    }
+    #team .reqs h3 {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    #team .reqs p.subtitle {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    #team .reqs .img {
+        width: 100%;
+        max-height: 300px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    #team .reqs .wrapper .block {
+        margin-top: 40px;
+    }
+    #team .reqs .wrapper .line p.value {
+        font-size: 16px;
+	    line-height: 22px;
+    }
+    #team .reqs .wrapper .line {
+        margin-bottom: 10px;
+    }
+    #team .middle-gallery .swiper-pagination {
+        bottom: 20px;
+    }
+    #team .top-info .img img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    #subtext {
+        padding: 40px 15px;
+    }
+    #subtext p {
+        font-size: 18px;
+	    line-height: 30px;
+    }
 }
 
 
@@ -6796,6 +7200,12 @@ body.about-page section#start {
     #mega-stocks .stocks-list .stocks-item {
         padding: 20px;
     }
+    #team .reqs .wrapper {
+        display: block;
+    }
+    #team .reqs .wrapper > div {
+        width: 100%;
+    }
 }
 @media (max-width: 678px) {
     #cabinet .childrens-block .item {
@@ -6814,6 +7224,14 @@ body.about-page section#start {
         font-size: 16px;
 	    line-height: 24px;
     }
+    #children-growth .item-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+    }
+    #privilege .wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+    }
 }
 @media (max-width: 550px) {
     #mini-news .mini-news-list {
@@ -6827,6 +7245,10 @@ body.about-page section#start {
     }
     #cabinet .childrens-block .actions {
         flex-direction: column-reverse;
+    }
+
+    #team .middle-gallery {
+        border-radius: 0;
     }
 }
 @media (max-width: 450px) {

@@ -86,12 +86,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     let outParksSwiper = new Swiper(".our-parks-swiper", {
-        slidesPerView: 2,
-        spaceBetween: 30,
+        slidesPerView: 1,
+        spaceBetween: 20,
         loop: true,
         autoplay: {
             delay: 2000,
             disableOnInteraction: false
+        },
+        breakpoints: {
+            500: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            }
         },
         grabCursor: true,
         pagination: {
@@ -348,8 +354,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     let animatorsSwiper = new Swiper(".animators-swiper", {
-		slidesPerView: 4,
-		spaceBetween: 30,
+		slidesPerView: 1,
+		spaceBetween: 20,
 		grabCursor: true,
 		pagination: {
             el: ".swiper-pagination",
@@ -358,6 +364,18 @@ document.addEventListener('DOMContentLoaded', function() {
             bulletClass: 'star-small',
             renderBullet: function (index, className) {
                 return '<button type="button" class="' + className + '"></button>';
+            }
+        },
+        breakpoints: {
+            991: {
+                slidesPerView: 4
+            },
+            678: {
+                slidesPerView: 3
+            },
+            550: {
+                slidesPerView: 2,
+                spaceBetween: 30
             }
         },
 		observeParents: true,

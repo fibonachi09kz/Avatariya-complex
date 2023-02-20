@@ -39,35 +39,57 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    try {
+        document.querySelectorAll('a[href^="#"').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                let href = this.getAttribute('href').substring(1);
+                const scrollTarget = document.getElementById(href);
+                const topOffset = 82
+                const elementPosition = scrollTarget.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - topOffset;
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    } catch (e) {
+        console.trace(e)
+    }
+
 
     // Плавающее меню в шапке
     try {
         let elem = document.querySelector('#menu-layout');
         let minimenu = document.querySelector('.fly-minimenu');
 
+        
         if (elem && minimenu) {
             let currentPosition = window.pageYOffset;
+            
             let minimenuPosition = minimenu.getBoundingClientRect().top + document.body.scrollTop;
-            console.log(minimenuPosition)
-
+           
             
             if (currentPosition > 121) {
                 elem.classList.add('fixed')
             }
             window.addEventListener('scroll', function() {
-                console.log(scrollY)
+                
+                if (minimenuPosition == 0) {
+                    elem.classList.remove('fixed')
+                }
                 if (scrollY < 121) {
                     elem.classList.remove('fixed')
-                } else if (scrollY + 100 >= minimenuPosition) {
+                } else if (scrollY + 50 >= minimenuPosition) {
                     elem.classList.remove('fixed')
                 } else {
                     elem.classList.add('fixed')
                 }
+                console.log(scrollY)
+                console.log('line' + minimenuPosition)
             });
-            return
-        }
-
-        if (elem) {
+        } else if (elem) {
             let currentPosition = window.pageYOffset;
             if (currentPosition > 121) {
                 elem.classList.add('fixed')

@@ -301,6 +301,7 @@ ul.check-icon li:before {
 .star-big {
     width: 28px;
     height: 28px;
+    flex: none;
     transition: 0.15s all;
     cursor: pointer;
     border: none;
@@ -317,6 +318,7 @@ ul.check-icon li:before {
 .star-small {
     width: 20px;
     height: 20px;
+    flex: none;
     transition: 0.15s all;
     cursor: pointer;
     border: none;
